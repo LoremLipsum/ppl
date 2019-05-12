@@ -10,12 +10,23 @@
   &.active {
     display: block;
   }
+
+  &--video {
+    .modal__dialog {
+      background-color: #190905;
+      padding-bottom: 20px;
+    }
+
+    .modal__dialog-inner {
+      padding: 0 10px;
+    }
+  }
 }
 
 .modal__dialog {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding-top: 60px;
   padding-bottom: 40px;
   background-color: color(white);
@@ -29,24 +40,43 @@
 
 .modal__close {
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 5px;
+  right: 5px;
+}
+//
+// .modal__heading {
+//   margin: 0;
+//   margin-bottom: 20px;
+//   color: color(black);
+//   font-size: 30px;
+//   font-weight: 700;
+//   line-height: 1.2;
+//   text-transform: uppercase;
+// }
+//
+// .modal__text {
+//   margin: 0;
+//   padding-bottom: 30px;
+// }
+
+.modal__video {
+  display: block;
+  margin: 0 auto;
+  border: none;
 }
 
-.modal__heading {
-  margin: 0;
-  margin-bottom: 20px;
-  color: color(black);
-  font-family: font(secondary);
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-transform: uppercase;
+@media (orientation:  portrait) {
+  .modal__video {
+    width: 100%;
+    height: 52vw;
+  }
 }
 
-.modal__text {
-  margin: 0;
-  padding-bottom: 30px;
+@media (orientation: landscape) {
+  .modal__video {
+    width: 78vw;
+    height: 100%;
+  }
 }
 
 @include respond-to(medium) {
@@ -59,6 +89,19 @@
     &.active {
       display: flex;
     }
+
+    &--video {
+      padding: 20px;
+
+      .modal__dialog {
+        width: 700px;
+        height: 450px;
+      }
+
+      .modal__dialog-inner {
+        padding: 0 20px;
+      }
+    }
   }
 
   .modal__dialog {
@@ -66,7 +109,6 @@
     width: 590px;
     height: auto;
     max-height: calc(100vh - 160px);
-    padding-top: 50px;
     padding-bottom: 50px;
   }
 
@@ -76,9 +118,6 @@
 
   .modal__close {
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
   }
 
   .modal__heading {
@@ -89,9 +128,32 @@
   .modal__text {
     padding-bottom: 45px;
   }
+
+  @media (orientation:  portrait) {
+    .modal__video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .modal__video {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 @include respond-to(large) {
+  .modal {
+    &--video {
+      .modal__dialog {
+        width: 900px;
+        height: 560px;
+      }
+    }
+  }
+
   .modal__heading {
     margin-bottom: 30px;
     font-size: 45px;

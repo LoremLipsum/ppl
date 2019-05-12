@@ -7,7 +7,7 @@ mixin header(data)
         js: 'header',
     })&attributes(attributes)
         .header__list-wrap
-            .header__list.header__list--mobile
+            ul.header__list.header__list--mobile
                 li.header__item
                     +button-nav({
                         mix: 'header__button-nav',
@@ -50,7 +50,7 @@ mixin header(data)
                 class: 'header__info',
                 text: 'Крупнейший отечественный <br>производитель и поставщик <br>табачных изделий'
             })
-        .header__panel.js-panel-main-nav
+        nav.header__panel.js-panel-main-nav(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
             .header__panel-wrap
                 +main-nav({
                     items: mainNav,

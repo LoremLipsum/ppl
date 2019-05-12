@@ -291,8 +291,6 @@
   }
 
   .intro__video-item {
-    width: 220px;
-    height: 135px;
     margin: 0;
 
     &--left {
@@ -308,7 +306,7 @@
     order: 2;
     position: relative;
     width: auto;
-    margin-top: 25px;
+    margin-top: 30px;
 
     &::after {
       content: "";
@@ -367,13 +365,8 @@
     margin-bottom: 5px;
   }
 
-  .intro__video-item {
-    width: 325px;
-    height: 200px;
-  }
-
   .intro__logo-wrap {
-    margin-top: 68px;
+    margin-top: 52px;
 
     &::after {
       bottom: -40px;

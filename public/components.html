@@ -14,7 +14,7 @@
   <body>
     <header class="header js-header">
       <div class="header__list-wrap">
-        <div class="header__list header__list--mobile">
+        <ul class="header__list header__list--mobile">
           <li class="header__item">
             <button class="button-nav header__button-nav js-button-nav" aria-label="Открыть меню" type="button">
               <span class="button-nav__icon">
@@ -30,7 +30,7 @@
               </svg>
             </button>
           </li>
-        </div>
+        </ul>
         <ul class="header__list header__list--lang">
           <li class="header__item">
             <a class="header__lang active" href="#">Ru
@@ -67,7 +67,7 @@
         <p class="header__info">Крупнейший отечественный <br>производитель и поставщик <br>табачных изделий
         </p>
       </div>
-      <div class="header__panel js-panel-main-nav">
+      <nav class="header__panel js-panel-main-nav" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <div class="header__panel-wrap">
           <ul class="main-nav header__main-nav">
             <li class="main-nav__item" itemprop="name">
@@ -106,7 +106,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </nav>
       <div class="overlay header__overlay js-header-overlay">
       </div>
     </header>
@@ -323,7 +323,7 @@
           </span>
         </button>
         <div class="modal__dialog-inner">
-          <iframe class="modal__video js-modal-video-iframe" id="player" type="text/html" width="640" height="360"></iframe>
+          <iframe class="modal__video js-modal-video-iframe" id="player" width="640" height="360"></iframe>
         </div>
       </div>
     </div>
