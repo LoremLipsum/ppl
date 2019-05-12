@@ -1,0 +1,26 @@
+include ./include
+
+block vars
+    - var pageTitle = 'ТД Время'
+    - var main = false
+
+doctype html
+html(lang="ru-RU")
+    block head
+        +head()
+
+    body
+        block icon
+        block header
+            +header({})
+        block content
+        block footer
+            +footer({})
+        block modal
+            +modal({
+                js: 'modal-video',
+                video: true,
+                mod: 'video',
+            })
+        block scripts
+            +scripts()

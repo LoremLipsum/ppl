@@ -1,0 +1,14 @@
+mixin button-video(data)
+    +el({
+        tag: 'button',
+        class: 'button-video',
+        href: data.href,
+        mod: data.mod,
+        mix: data.mix,
+        js: 'button-video',
+    })(hidden)
+        +el({
+            tag: 'svg',
+            class: 'button-video__icon',
+            icon: 'arrow-triangle'
+        })

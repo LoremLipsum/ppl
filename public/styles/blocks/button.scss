@@ -1,0 +1,112 @@
+.button {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 8px 24px;
+  border: 2px solid;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--bg-primary {
+    border-color: color(primary);
+    background-color: color(primary);
+    color: color(white);
+
+    &:hover,
+    &:focus,
+    &.active {
+      border-color: rgba(color(primary), $change);
+      background-color: rgba(color(primary),$change);
+    }
+  }
+
+  &--bg-secondary {
+    border-color: color(secondary);
+    background-color: color(secondary);
+    color: color(white);
+
+    &:hover,
+    &:focus,
+    &.active {
+      border-color: rgba(color(secondary), $change);
+      background-color: rgba(color(secondary),$change);
+    }
+  }
+
+  &--border-disabled {
+    border-color: color(disabled);
+    color: color(disabled);
+  }
+
+  &--border-primary {
+    border-color: color(primary);
+    color: color(primary);
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: color(primary);
+      color: color(white);
+    }
+  }
+
+  &--border-white {
+    border-color: color(white);
+    color: color(white);
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: color(white);
+      color: color(black);
+    }
+  }
+
+  &--border-secondary {
+    border-color: color(secondary);
+    color: color(secondary);
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: color(secondary);
+      color: color(white);
+    }
+  }
+
+  &:disabled,
+  &--bg-disabled,
+  &--border-disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &--bg-disabled {
+    border-color: color(disabled);
+    background-color: color(disabled);
+    color: color(white);
+  }
+}
+
+@include respond-to(medium) {
+  .button {
+    padding: 10px 26px;
+    border-radius: 22px;
+    font-size: 15px;
+    line-height: 19px;
+  }
+}
+
+@include respond-to(medium) {
+  .button {
+    padding: 12px 26px;
+    border-radius: 25px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

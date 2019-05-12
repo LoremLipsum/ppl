@@ -1,0 +1,55 @@
+mixin intro(data)
+    +el({
+        tag: 'section',
+        class: 'intro',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .intro__wrap
+            .intro__note.intro__note--limit
+                +limit({
+                    mix: 'intro__limit',
+                    text: '18+'
+                })
+                +el({
+                    class: 'intro__note-text',
+                    text: 'Вы находитесь на сайте табачной компании'
+                })
+            .intro__heading-wrap
+                +el({
+                    tag: 'h1',
+                    mix: 'intro__heading',
+                    text: '<span class="intro__heading-lg">Осуществляем полный <br>производственный цикл&nbsp;&mdash; </span><span class="intro__heading-sm">от&nbsp;выращивания сырья, производства продукции <br>до&nbsp;доставки потребителям </span><span class="intro__heading-md">более 20&nbsp;лет</span>',
+                    after: {
+                        tag: 'svg',
+                        class: 'intro__heading-icon',
+                        icon: 'leafs',
+                    }
+                })
+            .intro__video-wrap
+                //- Для видео надо подставить id видео с ютуба data-video-id тогда подставится превьюшка и видео в модальное окно
+                +video-item({
+                    mix: 'intro__video-item intro__video-item--left',
+                    heading: 'Как происходит процесс выращивания',
+                    videoId: '1ud5yDjM63I',
+                })
+                +video-item({
+                    mix: 'intro__video-item intro__video-item--right',
+                    heading: 'Как осуществляется призводство сигарет',
+                    videoId: 'yKrdrK6ZtUY'
+                })
+                .intro__logo-wrap
+                    +logo({
+                        mix: 'intro__logo',
+                        mod: 'primary',
+                    })
+            .intro__note.intro__note--button-down
+                +button-down({
+                    mix: 'intro__button-down'
+                })
+                +el({
+                    class: 'intro__note-text',
+                    text: 'Минздрав предупреждает курение опасно для вашего здоровья'
+                })
+        .intro__bg(style="background-image: url(./assets/images/bg-intro.jpg);")

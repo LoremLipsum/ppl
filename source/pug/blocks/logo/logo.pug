@@ -1,0 +1,27 @@
+mixin logo(data)
+    +el({
+        tag: 'a',
+        class: 'logo',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        href: main == true ? 'none' : 'main.html',
+        title: main == true ? data.title : 'Перейти на главную страницу',
+    })&attributes(attributes)
+        +el({
+            class: 'logo__image',
+            tag: 'img',
+            image: 'logo-white.svg'
+        })
+        //- else if data.secondary_white
+        //-     +el({
+        //-         class: 'logo__image',
+        //-         tag: 'img',
+        //-         image: 'logo-secondary-white.svg'
+        //-     })
+        //- else
+        //-     +el({
+        //-         class: 'logo__image',
+        //-         tag: 'img',
+        //-         image: 'logo-primary.svg'
+        //-     })

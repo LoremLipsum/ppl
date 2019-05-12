@@ -1,0 +1,18 @@
+mixin video-item(data)
+    +el({
+        class: 'video-item',
+        mod: data.mod,
+        mix: data.mix,
+        js: 'video-item',
+    })(data-video-id=data.videoId)
+        +el({
+            class: 'video-item__control'
+        })
+            +button-video({
+                mix: 'video-item__button',
+            })
+            +el({
+                class: 'video-item__heading',
+                text: data.heading,
+            })
+            //- style: 'background-image: url(https://img.youtube.com/vi/' + videoId + '/0.jpg);',

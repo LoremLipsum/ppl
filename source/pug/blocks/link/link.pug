@@ -1,0 +1,11 @@
+mixin link(data)
+    +el({
+        tag: data.tag ? data.tag : 'a',
+        class: 'link',
+        href: data.href,
+        target: data.target,
+        title: data.title,
+        mod: data.mod,
+        mix: data.mix,
+        text: data.text,
+    })&attributes(attributes)

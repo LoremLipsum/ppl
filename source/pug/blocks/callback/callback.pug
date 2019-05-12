@@ -1,0 +1,19 @@
+mixin callback(data)
+    +el({
+        class: 'callback',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'a',
+            href: 'tel:+79785001445',
+            class: 'callback__link',
+            text: '+7 (978) <span class="callback__number">500-14-45</span>',
+        })
+        +el({
+            tag: 'button',
+            class: 'callback__button',
+            text: 'Обратный звонок',
+            js: 'open-callback'
+        })

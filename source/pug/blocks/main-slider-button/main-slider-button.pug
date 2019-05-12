@@ -1,0 +1,18 @@
+mixin main-slider-button(data)
+    +el({
+        tag: 'button',
+        class: 'main-slider-button',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'img',
+            class: 'main-slider-button__image',
+            image: data.image
+        })
+        +el({
+            tag: 'span',
+            text: data.heading,
+            class: 'main-slider-button__title',
+        })

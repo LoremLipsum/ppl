@@ -1,0 +1,14 @@
+mixin button-down(data)
+    +el({
+        tag: 'button',
+        class: 'button-down',
+        href: data.href,
+        mod: data.mod,
+        mix: data.mix,
+        js: 'button-down',
+    })(hidden)
+        +el({
+            tag: 'svg',
+            class: 'button-down__icon',
+            icon: 'mouse'
+        })

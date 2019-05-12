@@ -1,0 +1,24 @@
+mixin features(data)
+    +el({
+        tag: 'section',
+        class: 'features',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .features__wrap
+            h2.hidden Наши преимущества
+            +el({
+                tag: 'ul',
+                class: 'features__list'
+            })
+                each item in data.items
+                    +el({
+                        tag: 'li',
+                        class: 'features__item',
+                    })
+                        +features-item({
+                            icon: item.icon,
+                            text: item.text,
+                            heading: item.heading
+                        })

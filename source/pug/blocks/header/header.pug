@@ -1,0 +1,65 @@
+mixin header(data)
+    +el({
+        tag: 'header',
+        class: 'header',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'header',
+    })&attributes(attributes)
+        .header__list-wrap
+            .header__list.header__list--mobile
+                li.header__item
+                    +button-nav({
+                        mix: 'header__button-nav',
+                        js: 'button-nav',
+                    })
+                li.header__item.header__item--callback
+                    +button-icon({
+                        tag: 'button',
+                        class: 'header__button-icon',
+                        icon: 'tel',
+                        ariaLabel: 'Позвонить',
+                        js: 'open-callback',
+                    })
+            ul.header__list.header__list--lang
+                each item in ['Ru', 'En', 'Fr']
+                    li.header__item
+                        +el({
+                            tag: 'a',
+                            class: 'header__lang',
+                            text: item,
+                            mix: item == 'Ru' ? 'active' : '',
+                        })
+
+        .header__dialog.header__dialog--callback.js-dialog.js-dialog-callback
+            .header__dialog-wrap
+                +button-close({
+                    mix: 'header__dialog-close',
+                    js: 'close-dialog',
+                })
+                +callback({
+                    mix: 'header__callback'
+                })
+        .header__company
+            +logo({
+                mix: 'header__logo',
+                mod: 'primary',
+            })
+            +el({
+                tag: 'p',
+                class: 'header__info',
+                text: 'Крупнейший отечественный <br>производитель и поставщик <br>табачных изделий'
+            })
+        .header__panel.js-panel-main-nav
+            .header__panel-wrap
+                +main-nav({
+                    items: mainNav,
+                    mix: 'header__main-nav'
+                })
+                +callback({
+                    mix: 'header__callback header__callback--panel'
+                })
+        +overlay({
+            js: 'header-overlay',
+            mix: 'header__overlay',
+        })

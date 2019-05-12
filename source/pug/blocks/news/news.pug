@@ -1,0 +1,30 @@
+mixin news(data)
+    +el({
+        class: 'news',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .news__wrap
+            .news__top
+                h2.news__heading Новости
+                +link({
+                    text: 'Все новости',
+                    mod: 'uppercase',
+                    mix: 'news__top-link'
+                })
+            +el({
+                tag: 'ul',
+                class: 'news__list'
+            })
+                each item in data.items
+                    +el({
+                        tag: 'li',
+                        class: 'news__item',
+                    })
+                        +news-item({
+                            image: item.image,
+                            date: item.date,
+                            heading: item.heading,
+                            text: item.text
+                        })

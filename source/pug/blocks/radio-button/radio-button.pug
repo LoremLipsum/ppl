@@ -1,0 +1,22 @@
+mixin radio-button(data)
+    +el({
+        tag: 'label',
+        class: 'radio-button',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+        +el({
+            tag: 'input',
+            class: 'hidden radio-button__input',
+            type: 'radio',
+            checked: data.checked,
+            name: data.name,
+            required: data.required,
+            value: data.value,
+        })(aria-required='true', aria-invalid='false')
+        +el({
+            tag: 'span',
+            class: 'radio-button__label',
+            text: data.text
+        })

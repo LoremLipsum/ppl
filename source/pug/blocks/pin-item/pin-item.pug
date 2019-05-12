@@ -1,0 +1,26 @@
+mixin pin-item(data)
+    +el({
+        class: 'pin-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        if data.main
+            +el({
+                class: 'pin-item__text',
+                text: data.main.text
+            })
+            +el({
+                class: 'pin-item__descr',
+                text: data.main.descr
+            })
+        else
+            +el({
+                tag: 'svg',
+                icon: 'pin',
+                class: 'pin-item__icon'
+            })
+            +el({
+                class: 'pin-item__text',
+                text: data.text
+            })

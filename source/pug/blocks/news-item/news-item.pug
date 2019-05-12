@@ -1,0 +1,42 @@
+mixin news-item(data)
+    +el({
+        tag: 'article',
+        class: 'news-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'a',
+            href: 'news-item.html',
+            class: 'news-item__image-wrap',
+        })
+            +el({
+                tag: 'img',
+                upload: data.image,
+                class: 'news-item__image'
+            })
+        .news-item__content
+            +el({
+                tag: 'h4',
+                class: 'news-item__heading',
+                before: {
+                    tag: 'a',
+                    text: data.heading,
+                    class: 'news-item__heading-link',
+                }
+            })
+            +el({
+                tag: 'p',
+                class: 'news-item__text',
+                text: data.text,
+                js: 'ellipsis',
+            })
+            .news-item__bottom
+                +date({
+                    mix: 'news-item__date',
+                    text: data.date,
+                })
+                +link({
+                    text: 'подробнее',
+                })

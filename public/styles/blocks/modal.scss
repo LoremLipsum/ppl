@@ -1,0 +1,112 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.modal__dialog {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-color: color(white);
+}
+
+.modal__dialog-inner {
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.modal__heading {
+  margin: 0;
+  margin-bottom: 20px;
+  color: color(black);
+  font-family: font(secondary);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.modal__text {
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+@include respond-to(medium) {
+  .modal {
+    padding: 80px 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  .modal__dialog {
+    flex-shrink: 0;
+    width: 590px;
+    height: auto;
+    max-height: calc(100vh - 160px);
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .modal__dialog-inner {
+    padding: 0 65px;
+  }
+
+  .modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  .modal__heading {
+    margin-bottom: 25px;
+    font-size: 40px;
+  }
+
+  .modal__text {
+    padding-bottom: 45px;
+  }
+}
+
+@include respond-to(large) {
+  .modal__heading {
+    margin-bottom: 30px;
+    font-size: 45px;
+  }
+
+  .modal__dialog {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .modal__dialog-inner {
+    padding: 0 70px;
+  }
+
+  .modal__text {
+    padding-bottom: 50px;
+  }
+}

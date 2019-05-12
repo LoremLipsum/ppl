@@ -1,0 +1,48 @@
+mixin main-slider(data)
+    +el({
+        tag: 'section',
+        class: 'main-slider',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        style: 'background-image: url(./assets/images/bg-main-slider.jpg)'
+    })&attributes(attributes)
+        .main-slider__wrap
+            +el({
+                tag: 'h1',
+                mix: 'main-slider__heading',
+                text: 'Каталог продукции',
+            })
+            +el({
+                mix: 'main-slider__slider ',
+            })
+                .swiper-container.js-main-slider
+                    .swiper-wrapper
+                        each item in data.items
+                            .main-slider__item.swiper-slide
+                                +main-slider-item({
+                                    image: item.item.image,
+                                    heading: item.item.heading,
+                                    text: item.item.text,
+                                })
+            +el({
+                mix: 'main-slider__nav',
+            })
+                +control({
+                    tag: 'button',
+                    mod: ['prev', 'secondary'],
+                    js: 'main-slider-prev',
+                })
+                .swiper-container.js-main-slider-nav
+                    .swiper-wrapper
+                        each item in data.items
+                            .main-slider__button-wrap.swiper-slide
+                                +main-slider-button({
+                                    image: item.button.image,
+                                    heading: item.button.heading,
+                                })
+                +control({
+                    tag: 'button',
+                    mod: ['next', 'secondary'],
+                    js: 'main-slider-next',
+                })

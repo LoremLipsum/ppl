@@ -1,0 +1,28 @@
+extends ./templates/template
+
+block vars
+    - var main = true
+    - var pageId = 1
+
+block header
+    .header-intro-wrap
+        +header({})
+        +intro({
+        })
+block content
+    main.content
+    +main-slider({
+        items: slider,
+        mix: 'content__main-slider',
+    })
+    +agency({
+        mix: 'content__agency',
+        items: agency
+    })
+    +features({
+        items: features,
+        mix: 'content__features',
+    })
+    +news({
+        items: news
+    })

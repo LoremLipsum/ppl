@@ -1,0 +1,43 @@
+mixin main-slider-item(data)
+    +el({
+        tag: 'article',
+        class: 'main-slider-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'main-slider-item__image-wrap',
+        })
+            +el({
+                tag: 'svg',
+                class: 'main-slider-item__bg-image',
+                icon: 'leafs'
+            })
+            +el({
+                tag: 'img',
+                class: 'main-slider-item__image',
+                image: data.image
+            })
+        +el({
+            class: 'main-slider-item__text-wrap',
+        })
+
+            +el({
+                tag: 'h3',
+                class: 'main-slider-item__heading',
+                text: data.heading
+            })
+            .js-swiper-scroll.swiper-container
+                .swiper-wrapper
+                    +el({
+                        class: 'main-slider-item__text',
+                        text: data.text,
+                        mix: 'swiper-slide'
+                    })
+                .swiper-scrollbar
+            .main-slider-item__link-wrap
+                +link({
+                    text: 'Подробнее',
+                    mix: 'main-slider-item__link',
+                })

@@ -1,0 +1,18 @@
+mixin control(data)
+    +el({
+        tag: data.tag,
+        class: 'control',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        title: data.title,
+        target: data.target,
+        href: data.href,
+        text: data.text,
+        position: data.position,
+    })&attributes(attributes)
+        +el({
+            tag: 'svg',
+            icon: 'arrow',
+            class: 'control__icon',
+        })

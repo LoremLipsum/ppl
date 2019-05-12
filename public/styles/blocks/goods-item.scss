@@ -1,0 +1,129 @@
+.goods-item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-item__sticker-top-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+.goods-item__icon-top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.goods-item__image-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 200px;
+  background-color: color(light);
+  text-decoration: none;
+  overflow: hidden;
+
+  @include mask(rgba(color(black), 0.5)) {
+    opacity: 0;
+    transition: duration(md) func(primary);
+  }
+
+  @include hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.goods-item__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include ofi(contain, center);
+}
+
+.goods-item__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.goods-item__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.goods-item__heading {
+  margin: 0;
+  font-family: font(primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.goods-item__heading-link {
+  text-decoration: none;
+  color: color(black);
+
+  @include hover {
+    text-decoration: underline;
+  }
+}
+
+.goods-item__cart {
+  flex-shrink: 0;
+  margin: 0 20px;
+}
+
+.goods-item__price {
+  margin-top: auto;
+  margin-bottom: 10px;
+  font-family: font(primary);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.goods-item__link {
+  width: auto;
+}
+
+@include respond-to(520px) {
+  .goods-item__image-wrap {
+    height: 200px;
+  }
+}
+
+@include respond-to(medium) {
+  .goods-item__image-wrap {
+    height: 250px;
+  }
+}
+
+@include respond-to(large) {
+  .goods-item__image-wrap {
+    height: 350px;
+  }
+
+  .goods-item__heading {
+    font-size: 18px;
+  }
+
+  .goods-item__sticker-top-left {
+    top: 18px;
+    left: 20px;
+  }
+
+  .goods-item__icon-top-right {
+    top: 18px;
+    right: 20px;
+  }
+}

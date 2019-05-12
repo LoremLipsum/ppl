@@ -1,0 +1,42 @@
+mixin agency(data)
+    +el({
+        tag: data.tag,
+        class: 'agency',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .agency__wrap
+            h2.agency__heading Представитель&shy;ства
+            .agency__map
+                +el({
+                    tag: 'picture',
+                    class: 'agency__picture',
+                })
+                    source(media="(min-width: 768px)" srcset='./assets/images/map-outline-1166@1x.webp 1x, ./assets/images/map-outline-1166@2x.webp 2x' type='image/webp')
+                    source(media="(min-width: 768px)" srcset='./assets/images/map-outline-1166@1x.png 1x, ./assets/images/map-outline-1166@2x.png 2x')
+                    source(media="(min-width: 420px)" srcset='./assets/images/map-outline-768@1x.webp 1x, ./assets/images/map-outline-768@2x.webp 2x' type='image/webp')
+                    source(media="(min-width: 420px)" srcset='./assets/images/map-outline-768@1x.png 1x, ./assets/images/map-outline-768@2x.png 2x')
+                    source(srcset='./assets/images/map-outline-420@1x.webp 1x, ./assets/images/map-outline-420@2x.webp 2x' type='image/webp')
+                    img.agency__image(src='./assets/images/map-outline-420@1x.png' srcset='./assets/images/map-outline-420@2x.png 2x' alt='Карта России')
+                +el({
+                    tag: 'ul',
+                    class: 'agency__list',
+                })
+                    each item in data.items
+                        +el({
+                            tag: 'li',
+                            class: 'agency__item',
+                            mod: item.mod,
+                        })
+                            +pin-item({
+                                text: item.text,
+                                mod: item.pinMod,
+                                main: item.main,
+                            })
+            +button({
+                tag: 'a',
+                text: 'Все представительства',
+                mix: 'agency__button',
+                mod: 'border-primary',
+            })

@@ -1,0 +1,23 @@
+mixin features-item(data)
+    +el({
+        class: 'features-item',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .features-item__top
+            .features-item__icon-wrap
+                +el({
+                    tag: 'svg',
+                    icon: data.icon,
+                    class: 'features-item__icon',
+                })
+            +el({
+                tag: 'h4',
+                class: 'features-item__heading',
+                text: data.heading,
+            })
+        +el({
+            class: 'features-item__text',
+            text: data.text
+        })
