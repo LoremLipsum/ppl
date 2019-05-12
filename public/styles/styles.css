@@ -2486,6 +2486,10 @@ body > *
         height: 185px;
         padding: 20px;
     }
+    .video-item__button
+    {
+        margin-right: 30px;
+    }
 }
 
 .limit
