@@ -21,7 +21,7 @@
         var atr = videoItem.getAttribute('data-video-id');
 
         videoModal.classList.add('active');
-        video.src = 'http://www.youtube.com/embed/' + atr+ '?enablejsapi=1';
+        video.src = 'https://www.youtube.com/embed/' + atr+ '?enablejsapi=1';
         video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
       })
     }
