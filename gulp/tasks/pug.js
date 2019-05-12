@@ -12,7 +12,7 @@ module.exports = () => (
         cache: true,
       }))
     .pipe($.htmlmin({
-      removeComments: true,
+      // removeComments: true,
       // collapseWhitespace: true,
       collapseBooleanAttributes: true,
       // removeAttributeQuotes: true,
