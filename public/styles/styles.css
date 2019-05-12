@@ -3016,7 +3016,9 @@ body > *
 
 .main-slider-item__text
 {
-    text-align: center; 
+    margin-bottom: 15px; 
+
+    text-align: center;
 
     color: #fff;
 }
@@ -3027,7 +3029,7 @@ body > *
 
 .main-slider-item__link-wrap
 {
-    margin-top: 15px;
+    margin-top: auto;
 
     text-align: center;
 }
