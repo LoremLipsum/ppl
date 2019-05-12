@@ -108,6 +108,12 @@
   .callback__link {
     margin-bottom: 5px;
   }
+
+  &--panel {
+    margin-top: 30px;
+    padding: 0 20px;
+    text-align: left;
+  }
 }
 
 .header__panel {
@@ -120,8 +126,8 @@
   display: flex;
   flex-direction: column;
   width: 280px;
-  padding: 40px 0;
   padding-top: 60px;
+  padding-bottom: 20px;
   background-color: color(primary);
   color: color(white);
   transition: duration(md) func(primary);
@@ -136,6 +142,10 @@
   flex-direction: column;
   height: 100%;
   overflow-y: auto;
+}
+
+.header__main-nav {
+  margin-bottom: auto;
 }
 
 .header__overlay {
@@ -208,6 +218,10 @@
       margin-bottom: 0;
       margin-right: 10px;
     }
+
+    &--panel {
+      display: block;
+    }
   }
 }
 
@@ -259,6 +273,10 @@
     padding-top: 10px;
     padding-bottom: 15px;
     background-color: transparent;
+  }
+
+  .header__main-nav {
+    margin-bottom: 0;
   }
 
   .header__callback {
