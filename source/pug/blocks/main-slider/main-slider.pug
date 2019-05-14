@@ -28,11 +28,6 @@ mixin main-slider(data)
             +el({
                 mix: 'main-slider__nav',
             })
-                +control({
-                    tag: 'button',
-                    mod: ['prev', 'secondary'],
-                    js: 'main-slider-prev',
-                })
                 .swiper-container.js-main-slider-nav
                     .swiper-wrapper
                         each item in data.items
@@ -43,6 +38,12 @@ mixin main-slider(data)
                                 })
                 +control({
                     tag: 'button',
+                    mod: ['prev', 'secondary'],
+                    js: 'main-slider-prev',
+                })
+                +control({
+                    tag: 'button',
                     mod: ['next', 'secondary'],
                     js: 'main-slider-next',
                 })
+            .main-slider__pagination.swiper-pagination.js-main-slider-pagination

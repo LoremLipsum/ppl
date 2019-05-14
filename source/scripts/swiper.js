@@ -16,8 +16,12 @@
       1220: {
         slidesPerView: 3,
       },
-      768: {
+      767: {
         slidesPerView: 1,
+        pagination: {
+          el: '.js-main-slider-pagination',
+          clickable: true,
+        },
       },
     }
   });

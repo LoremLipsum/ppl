@@ -1,7 +1,7 @@
 'use strict';
 
 (function() {
-  var size = 100;
+  var size = 90;
   var ellipsis = document.querySelectorAll('.js-ellipsis');
 
   if(ellipsis) {

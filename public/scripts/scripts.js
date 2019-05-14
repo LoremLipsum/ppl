@@ -59,7 +59,7 @@
 'use strict';
 
 (function() {
-  var size = 100;
+  var size = 90;
   var ellipsis = document.querySelectorAll('.js-ellipsis');
 
   if(ellipsis) {
@@ -168,8 +168,12 @@ $(document).ready(function (){
       1220: {
         slidesPerView: 3,
       },
-      768: {
+      767: {
         slidesPerView: 1,
+        pagination: {
+          el: '.js-main-slider-pagination',
+          clickable: true,
+        },
       },
     }
   });
