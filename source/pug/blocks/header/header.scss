@@ -43,6 +43,16 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &--limit {
+    margin-left: 5px;
+  }
+}
+
+.header__limit {
+  width: 32px;
+  height: 32px;
+  transform: translateY(2px);
 }
 
 .header__lang {
@@ -221,6 +231,14 @@
 
     &--panel {
       display: block;
+    }
+  }
+}
+
+@include respond-to(medium) {
+  .header__item {
+    &--limit {
+      display: none;
     }
   }
 }

@@ -21,6 +21,11 @@ mixin header(data)
                         ariaLabel: 'Позвонить',
                         js: 'open-callback',
                     })
+                li.header__item.header__item--limit
+                    +limit({
+                        mix: 'header__limit',
+                        text: '18+'
+                    })
             ul.header__list.header__list--lang
                 each item in ['Ru', 'En', 'Fr']
                     li.header__item

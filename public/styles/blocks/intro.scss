@@ -93,6 +93,7 @@
   padding-left: 50px;
 
   &--limit {
+    display: none;
     margin-bottom: auto;
 
     .intro__note-text {
@@ -219,6 +220,7 @@
     width: 485px;
 
     &--limit {
+      display: block;
       top: 20px;
       right: 0;
       margin: 0;
