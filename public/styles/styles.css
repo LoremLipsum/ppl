@@ -1609,8 +1609,9 @@ body > *
     height: 36px;
     padding: 9px;
 
-    text-decoration: none; 
+    text-decoration: none;
 
+    color: inherit; 
     border-radius: 50%;
 }
 .button-icon:hover,
@@ -1627,7 +1628,7 @@ body > *
     width: 100%;
     height: 100%;
 
-    fill: #cd8638;
+    fill: currentColor;
 }
 
 .button-down
@@ -2185,6 +2186,11 @@ body > *
     }
 }
 
+.callback
+{
+    color: inherit;
+}
+
 .callback__button,
 .callback__link
 {
@@ -2269,7 +2275,7 @@ body > *
 }
 .main-nav__item.active .main-nav__link
 {
-    color: #431b11;
+    color: #cd8638;
 }
 
 .main-nav__link

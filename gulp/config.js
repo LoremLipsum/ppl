@@ -29,7 +29,7 @@ const config = {
                       // 'node_modules/jquery-match-height/dist/jquery.matchHeight.js',
                       // 'node_modules/slick-carousel/slick/slick.js',
                       'node_modules/swiper/dist/js/swiper.js',
-                      'node_modules/baron/baron.js',
+                      // 'node_modules/baron/baron.js',
                       // 'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
                     ],
     libStyles     : [
