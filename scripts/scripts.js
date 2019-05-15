@@ -139,7 +139,9 @@ picturefill();
 
 })();
 
-$(document).ready(function (){
+'use strict';
+
+(function($) {
   var btn = $('.js-button-down');
   var content = $('.js-down');
 
@@ -148,7 +150,8 @@ $(document).ready(function (){
       scrollTop: content.offset().top
     }, 500);
   });
-});
+
+})(jQuery)();
 
 'use strict';
 
@@ -169,7 +172,7 @@ $(document).ready(function (){
         slidesPerView: 3,
       },
       767: {
-        slidesPerView: 1,
+        slidesPerView: 0,
         pagination: {
           el: '.js-main-slider-pagination',
           clickable: true,
@@ -192,6 +195,17 @@ $(document).ready(function (){
       delay: 5000,
       disableOnInteraction: false,
     },
+    breakpoints: {
+      767: {
+        thumbs: {
+          swiper: '',
+        },
+        pagination: {
+          el: '.js-main-slider-pagination',
+          clickable: true,
+        },
+      }
+    }
   });
 
   var swiperScroll = new Swiper('.js-swiper-scroll', {
