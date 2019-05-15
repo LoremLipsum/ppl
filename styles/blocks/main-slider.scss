@@ -95,6 +95,11 @@
     opacity: 1;
   }
 }
+//
+.main-slider__nav {
+  max-height: 0;
+  overflow: hidden;
+}
 
 @include respond-to(medium) {
   .main-slider__heading {
@@ -111,6 +116,11 @@
 
   .main-slider__pagination {
     display: none;
+  }
+
+  .main-slider__nav {
+    max-height: none;
+    overflow: visible;
   }
 }
 

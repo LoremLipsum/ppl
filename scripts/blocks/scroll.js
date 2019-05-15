@@ -1,13 +1,16 @@
-'use strict';
-
 (function($) {
-  var btn = $('.js-button-down');
-  var content = $('.js-down');
+	'use strict';
+	$(function() {
 
-  btn.click(function (){
-    $('html, body').animate({
-      scrollTop: content.offset().top
-    }, 500);
-  });
+    var btn = $('.js-button-down');
+    var content = $('.js-down');
 
-})(jQuery)();
+    btn.click(function (){
+      $('html, body').animate({
+        scrollTop: content.offset().top
+      }, 500);
+    });
+
+
+	});
+})(jQuery);
