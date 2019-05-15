@@ -5328,6 +5328,13 @@ body > *
     opacity: 1;
 }
 
+.main-slider__nav
+{
+    overflow: hidden; 
+
+    max-height: 0;
+}
+
 @media (min-width: 768px)
 {
     .main-slider__heading
@@ -5345,6 +5352,12 @@ body > *
     .main-slider__pagination
     {
         display: none;
+    }
+    .main-slider__nav
+    {
+        overflow: visible; 
+
+        max-height: none;
     }
 }
 

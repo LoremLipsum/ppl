@@ -17,7 +17,7 @@
         slidesPerView: 3,
       },
       767: {
-        slidesPerView: 1,
+        slidesPerView: 0,
         pagination: {
           el: '.js-main-slider-pagination',
           clickable: true,
@@ -40,6 +40,17 @@
       delay: 5000,
       disableOnInteraction: false,
     },
+    breakpoints: {
+      767: {
+        thumbs: {
+          swiper: '',
+        },
+        pagination: {
+          el: '.js-main-slider-pagination',
+          clickable: true,
+        },
+      }
+    }
   });
 
   var swiperScroll = new Swiper('.js-swiper-scroll', {
