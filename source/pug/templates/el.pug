@@ -16,7 +16,7 @@ mixin el(data)
         - elMods += ' ' + data.class + '--' + data.mod
     //- href по умолчанию '#'
     if data.tag == 'a'
-        - elAttr = data.href ? {href: data.href} : {href: '#'}
+        - elAttr = data.href ? {href: data.href} : {href: 'javascript:void(0)'}
     //- если ссылка без href
     if data.href == 'none'
         - elAttr = ''
@@ -68,7 +68,8 @@ mixin el(data)
             for = data.for,
             min = data.min,
             max = data.max,
-            style = data.style
+            style = data.style,
+            aria-haspopup= data.ariaHasPopup
         )&attributes(elAttr)&attributes(attributes)
         if data.tag && data.tag == 'svg'
             use(xlink:href = elXlink + '#' + data.icon)

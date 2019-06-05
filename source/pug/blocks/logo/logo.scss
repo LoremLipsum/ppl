@@ -21,6 +21,16 @@
       height: 36px;
     }
   }
+
+  &--page {
+    width: 120px;
+    height: 27px;
+
+    .logo__image {
+      width: 120px;
+      height: 27px;
+    }
+  }
 }
 
 .logo__image {
@@ -48,6 +58,16 @@
         height: 38px;
       }
     }
+
+    &--page {
+      width: 140px;
+      height: 32px;
+
+      .logo__image {
+        width: 140px;
+        height: 32px;
+      }
+    }
   }
 }
 
@@ -70,6 +90,16 @@
       .logo__image {
         width: 180px;
         height: 41px;
+      }
+    }
+
+    &--page {
+      width: 160px;
+      height: 36px;
+
+      .logo__image {
+        width: 160px;
+        height: 36px;
       }
     }
   }

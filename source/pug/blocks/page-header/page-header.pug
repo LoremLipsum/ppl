@@ -1,0 +1,70 @@
+mixin page-header(data)
+    +el({
+        tag: 'header',
+        class: 'page-header',
+        mix: data.mix,
+        mod: 'page',
+        js: 'header',
+    })&attributes(attributes)
+        .page-header__wrap
+            ul.page-header__list
+                li.page-header__item
+                    +button-nav({
+                        mix: 'page-header__button-nav',
+                        js: 'button-nav',
+                    })
+                li.page-header__item.page-header__item--callback
+                    +button-icon({
+                        tag: 'button',
+                        class: 'page-header__button-icon',
+                        icon: 'tel',
+                        ariaLabel: 'Позвонить',
+                        js: 'open-callback',
+                    })
+            +logo({
+                mix: 'page-header__logo',
+                mod: 'page',
+                primary: true,
+            })
+            nav.page-header__panel.js-panel-main-nav(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+                .page-header__panel-wrap
+                    +page-nav({
+                        items: mainNav,
+                        mix: 'page-header__page-nav'
+                    })
+                    +callback({
+                        mix: 'page-header__callback page-header__callback--panel'
+                    })
+            nav.page-header__lang-nav(aria-label='Языковое меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+                +lang-nav({
+                    items: [
+                        {
+                            text: 'Ru',
+                            lang: 'ru',
+                            mod: 'lvl-2',
+                            items: [
+                                {
+                                    text: 'En',
+                                    lang: 'en'
+                                },
+                                {
+                                    text: 'Fr',
+                                    lang: 'fr',
+                                },
+                            ]
+                        },
+                    ]
+                })
+            .page-header__dialog.page-header__dialog--callback.js-dialog.js-dialog-callback
+                .page-header__dialog-wrap
+                    +button-close({
+                        mix: 'page-header__dialog-close',
+                        js: 'close-dialog',
+                    })
+                    +callback({
+                        mix: 'page-header__callback'
+                    })
+            +overlay({
+                js: 'header-overlay',
+                mix: 'page-header__overlay',
+            })

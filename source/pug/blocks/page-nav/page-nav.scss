@@ -1,28 +1,28 @@
-.main-nav {
+.page-nav {
   @include ul-no;
 }
 
-.main-nav__item {
+.page-nav__item {
   margin-bottom: 0;
   color: color(primary);
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   text-transform: none;
-  border-bottom: 1px solid rgba(color(secondary), 0.3);
+  border-bottom: 1px solid rgba(color(secondary), 0.2);
 
   &:last-child {
     margin-bottom: 0;
   }
 
   &.active {
-    .main-nav__link {
+    .page-nav__link {
       color: color(secondary);
     }
   }
 }
 
-.main-nav__link {
+.page-nav__link {
   display: block;
   width: 100%;
   padding: 12px 25px;
@@ -34,28 +34,28 @@
   }
 }
 
-@include respond-to(1024px) {
-  .main-nav {
+@include respond-to(large) {
+  .page-nav {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
 
-  .main-nav__item {
+  .page-nav__item {
     flex-grow: 1;
-    margin-right: 20px;
+    margin-right: 14px;
     border-bottom: none;
-    font-size: 15px;
+    font-size: 14px;
     text-align: left;
-    color: color(white);
 
     &:last-child {
       margin-right: 0;
     }
 
     &.active {
-      .main-nav__link {
-        color: color(white);
+      .page-nav__link {
+        color: color(primary);
 
         &::after {
           opacity: 1;
@@ -65,7 +65,7 @@
     }
   }
 
-  .main-nav__link {
+  .page-nav__link {
     position: relative;
     padding: 4px;
     padding-bottom: 8px;
@@ -78,17 +78,19 @@
       right: 4px;
       bottom: 2px;
       height: 3px;
-      background-color: rgba(color(white), 0.3);
+      background-color: rgba(color(secondary), 0.3);
       opacity: 0;
       transition: duration(md) func(primary);
     }
 
     @include hover {
-      color: color(white);
+      color: color(primary);
 
       &::after {
         opacity: 1;
       }
     }
   }
+
+
 }

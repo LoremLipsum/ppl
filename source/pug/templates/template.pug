@@ -12,15 +12,15 @@ html(lang="ru-RU")
     body
         block icon
         block header
-            +header({})
+            if main
+                +header({})
+            if !main
+                +page-header({})
         block content
         block footer
             +footer({})
         block modal
-            +modal({
-                js: 'modal-video',
-                video: true,
-                mod: 'video',
-            })
+
+        block video
         block scripts
             +scripts()

@@ -1,0 +1,31 @@
+mixin lang-nav(data)
+    -var className = 'lang-nav'
+    -var active = ''
+
+
+    +el({
+        tag: 'ul',
+        class: className,
+        mod: data.mod,
+        mix: data.mix
+    })&attributes(attributes)
+        each item, index in data.items
+            +el({
+                tag: 'li',
+                class: className + '__item',
+                mix: active,
+                mod: item.mod,
+            })(itemprop='name')
+                +el({
+                    tag: 'a',
+                    class: className + '__link',
+                    text:item.text,
+                    href: item.href,
+                    js: item.js,
+                    ariaHasPopup: item.items ? 'true' : ''
+                })(rel='alternate' hreflang=item.lang itemprop='url')
+                if item.items
+                    +lang-nav-lvl-2({
+                        items: item.items,
+                        mix: 'lang-nav__lvl-2',
+                    })

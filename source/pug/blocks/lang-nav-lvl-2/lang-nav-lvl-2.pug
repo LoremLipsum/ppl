@@ -1,0 +1,25 @@
+mixin lang-nav-lvl-2(data)
+    -var className = 'lang-nav-lvl-2'
+    -var active = ''
+
+    +el({
+        tag: 'ul',
+        class: className,
+        mod: data.mod,
+        mix: data.mix,
+        ariaLabel: 'submenu',
+    })
+        each item, index in data.items
+            +el({
+                tag: 'li',
+                class: className + '__item',
+                mix: active,
+                mod: item.mod,
+            })(itemprop='name')
+                +el({
+                    tag: 'a',
+                    class: className + '__link',
+                    text:item.text,
+                    href: item.href,
+                    js: item.js,
+                })(rel='alternate' hreflang=item.lang itemprop='url')
