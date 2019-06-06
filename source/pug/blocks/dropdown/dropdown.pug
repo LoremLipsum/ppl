@@ -1,0 +1,20 @@
+mixin dropdown(data)
+    +el({
+        class: 'dropdown',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'dropdown',
+    })&attributes(attributes)
+        +el({
+            tag: 'button',
+            class: 'dropdown__button',
+            text: data.heading,
+            js: 'dropdown-button'
+        })(aria-haspopup='true' aria-expanded='false')
+        +el({
+            class: 'dropdown__dropdown',
+        })
+            +el({
+                class: 'dropdown__content',
+            })
+                block

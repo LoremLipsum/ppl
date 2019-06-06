@@ -1,6 +1,25 @@
 .checkbox {
   display: inline-block;
   cursor: pointer;
+
+  &--confirm {
+    .checkbox__label {
+      max-width: 250px;
+      color: rgba(#999, 0.7);
+      font-size: 12px;
+      line-height: 16px;
+
+      &::before {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        top: 50%;
+        transform: translateY(calc(-50% - 1px)) rotate(-45deg);
+      }
+    }
+  }
 }
 
 .checkbox__input {
@@ -13,12 +32,7 @@
   position: relative;
   display: block;
   text-align: left;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 45px;
-  color: inherit;
-  font-size: 16px;
-  line-height: 20px;
+  padding-left: 32px;
 
   &::before,
   &::after {
@@ -26,25 +40,33 @@
     position: absolute;
     display: block;
     transition: duration(md) func(primary);
+    transform-origin: center;
   }
 
   &::before {
     left: 0;
-    top: 0;
-    width: 26px;
-    height: 26px;
-    border: 2px solid currentColor;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid color(gray);
   }
 
   &::after {
     opacity: 0;
     top: 6px;
-    left: 7px;
-    width: 14px;
-    height: 8px;
-    border-left: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
+    left: 4px;
+    width: 8px;
+    height: 5px;
+    border-left: 1px solid color(secondary);
+    border-bottom: 1px solid color(secondary);
+    transform-origin: center;
     transform: rotate(-45deg);
+  }
+
+  @include hover {
+    &::before {
+      border-color: color(secondary);
+    }
   }
 }
 
@@ -54,20 +76,14 @@
   }
 }
 
-@include respond-to(medium) {
-  .checkbox__label {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    font-size: 17px;
-    line-height: 22px;
-  }
-}
-
 @include respond-to(large) {
   .checkbox__label {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    font-size: 18px;
-    line-height: 24px;
+    &::before {
+      top: 4px;
+    }
+
+    &::after {
+      top: 8px;
+    }
   }
 }

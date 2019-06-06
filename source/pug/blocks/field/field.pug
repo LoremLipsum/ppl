@@ -28,10 +28,7 @@ mixin field(data)
         })&attributes(attributes)
         if data.icon
             +el({
-                tag: 'span',
+                tag: 'svg',
                 class: 'field__icon',
-                after: {
-                    tag: 'svg',
-                    icon: data.icon,
-                }
+                icon: data.icon,
             })

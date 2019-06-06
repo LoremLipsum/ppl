@@ -1,0 +1,19 @@
+mixin list-items(data)
+    +el({
+        class: 'list-items',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'ul',
+            class: 'list-items__list',
+        })
+            block
+
+mixin list-items-item(data)
+    +el({
+        tag: 'li',
+        class: 'list-items__item',
+    })
+        block

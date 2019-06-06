@@ -1,0 +1,60 @@
+mixin form-feedback(data)
+    +el({
+        class: 'form-feedback',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .form-feedback__wrap
+            .form-feedback__card
+                .form-feedback__header
+                    h3.form-feedback__heading Не нашли ответ на ваш вопрос?
+                    p.form-feedback__text Задайте его нашим специалистам и мы перезвоним вам!
+                +f({
+                    class: 'form-feedback__form'
+                })
+                    .form-feedback__field-row
+                        +field({
+                            mix: 'form-feedback__field',
+                            icon: 'user',
+                            mod:  ['w-icon'],
+                            label: 'Ваше имя',
+                            name: 'user',
+                            required: 'true',
+                            placeholder: 'Ваше имя'
+                        })(aria-required='true', aria-invalid='false')
+                        +field({
+                            mix: 'form-feedback__field',
+                            icon: 'tel',
+                            mod:  ['w-icon'],
+                            label: 'Ваш телефон',
+                            type: 'tel',
+                            name: 'tel',
+                            required: 'true',
+                            placeholder: '+7 (___) ___-__-__'
+                        })(aria-required='true', aria-invalid='false')
+                    +field({
+                        tag: 'textarea',
+                        mix: 'form-feedback__textarea',
+                        icon: 'message',
+                        mod:  ['w-icon'],
+                        label: 'Введите сообщение',
+                        name: 'message',
+                        placeholder: 'Сообщение'
+                    })
+                    .form-feedback__footer
+                        .form-feedback__confirm-wrap
+                            +checkbox({
+                                mod: ['confirm'],
+                                label: 'Даю согласие на обработку моих персональных данных',
+                                checked: 'checked',
+                                required: 'required',
+                                mix: 'form-feedback__confirm',
+                            })
+                        .form-feedback__submit-wrap
+                            +button({
+                                type: 'submit',
+                                mix: 'form-feedback__submit',
+                                mod: ['shadow', 'size-md'],
+                                text: 'Отправить',
+                            })

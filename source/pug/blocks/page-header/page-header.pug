@@ -1,17 +1,17 @@
 mixin page-header(data)
     +el({
-        tag: 'header',
+        tag: data.tag,
         class: 'page-header',
-        mix: data.mix,
-        mod: 'page',
-        js: 'header',
+        mix: 'js-header-scroll',
+        mod: data.mod,
+        js: 'page-header',
     })&attributes(attributes)
         .page-header__wrap
             ul.page-header__list
                 li.page-header__item
                     +button-nav({
                         mix: 'page-header__button-nav',
-                        js: 'button-nav',
+                        js: 'button-page-nav',
                     })
                 li.page-header__item.page-header__item--callback
                     +button-icon({
@@ -19,14 +19,14 @@ mixin page-header(data)
                         class: 'page-header__button-icon',
                         icon: 'tel',
                         ariaLabel: 'Позвонить',
-                        js: 'open-callback',
+                        js: 'open-page-callback',
                     })
             +logo({
                 mix: 'page-header__logo',
                 mod: 'page',
                 primary: true,
             })
-            nav.page-header__panel.js-panel-main-nav(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+            nav.page-header__panel.js-panel-page-nav(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
                 .page-header__panel-wrap
                     +page-nav({
                         items: mainNav,
@@ -55,16 +55,16 @@ mixin page-header(data)
                         },
                     ]
                 })
-            .page-header__dialog.page-header__dialog--callback.js-dialog.js-dialog-callback
+            .page-header__dialog.page-header__dialog--callback.js-page-dialog.js-page-dialog-callback
                 .page-header__dialog-wrap
                     +button-close({
                         mix: 'page-header__dialog-close',
-                        js: 'close-dialog',
+                        js: 'close-page-dialog',
                     })
                     +callback({
                         mix: 'page-header__callback'
                     })
             +overlay({
-                js: 'header-overlay',
+                js: 'page-header-overlay',
                 mix: 'page-header__overlay',
             })

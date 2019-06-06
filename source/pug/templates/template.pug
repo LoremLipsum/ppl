@@ -15,7 +15,9 @@ html(lang="ru-RU")
             if main
                 +header({})
             if !main
-                +page-header({})
+                +page-header({
+                    tag: 'header',
+                })
         block content
         block footer
             +footer({})

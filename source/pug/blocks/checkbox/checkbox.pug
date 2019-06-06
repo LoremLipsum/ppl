@@ -14,9 +14,9 @@ mixin checkbox(data)
             name: data.name,
             required: data.required,
             value: data.value
-        })(aria-required='true', aria-invalid='false')
+        })&attributes(attributes)
         +el({
             tag: 'span',
             class: 'checkbox__label',
-            text: data.text
+            text: data.label
         })

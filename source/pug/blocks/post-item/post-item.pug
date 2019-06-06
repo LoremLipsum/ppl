@@ -1,0 +1,42 @@
+mixin post-item(data)
+    +el({
+        tag: 'article',
+        class: 'post-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'a',
+            href: 'post-item.html',
+            class: 'post-item__image-wrap',
+        })
+            +el({
+                tag: 'img',
+                upload: data.image,
+                class: 'post-item__image'
+            })
+        .post-item__content
+            +el({
+                tag: 'h4',
+                class: 'post-item__heading',
+                before: {
+                    tag: 'a',
+                    text: data.heading,
+                    class: 'post-item__heading-link',
+                }
+            })
+            +el({
+                tag: 'p',
+                class: 'post-item__text',
+                text: data.text,
+                js: 'ellipsis',
+            })
+            .post-item__bottom
+                +date({
+                    mix: 'post-item__date',
+                    text: data.date,
+                })
+                +link({
+                    text: 'подробнее',
+                })

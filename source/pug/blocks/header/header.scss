@@ -182,6 +182,14 @@
   z-index: 1000;
 }
 
+.header__scroll {
+  display: none !important;
+
+  &.active {
+    display: block !important;
+  }
+}
+
 @include respond-to(620px) {
   .header {
     display: flex;

@@ -1,0 +1,24 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = "Peppell"
+    - var pageId = 1
+
+block content
+    main.page-content.content--bg-light
+        .page-content__wrap
+            h1.page-content__heading Статьи
+            +list-items({
+                mod: 'posts',
+                mix: 'page-content__posts'
+            })
+                each item in posts
+                    +list-items-item({})
+                        +post-item({
+                            image: item.image,
+                            date: item.date,
+                            heading: item.heading,
+                            text: item.text
+                        })
+            +pagination({
+            })

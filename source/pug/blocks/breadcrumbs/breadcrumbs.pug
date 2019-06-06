@@ -1,0 +1,26 @@
+mixin breadcrumbs(data)
+    +el({
+        tag: 'nav',
+        class: 'breadcrumbs',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+        +el({
+            tag: 'ol',
+            class: 'breadcrumbs__list',
+        })(itemscope itemtype="http://schema.org/BreadcrumbList")
+            each item, index in data.items
+                +el({
+                    tag: 'li',
+                    class: 'breadcrumbs__item',
+                })(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    +el({
+                        tag: 'a',
+                        class: 'breadcrumbs__link',
+                    })(itemprop="item")
+                        +el({
+                            tag: 'span',
+                            text: item,
+                        })(itemprop="name")
+                        meta(itemprop="position" content=(index + 1))

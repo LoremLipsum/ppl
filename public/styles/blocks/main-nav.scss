@@ -4,12 +4,12 @@
 
 .main-nav__item {
   margin-bottom: 0;
-  color: color(white);
+  color: color(primary);
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   text-transform: none;
-  border-bottom: 1px solid rgba(color(secondary), 0.2);
+  border-bottom: 1px solid rgba(color(secondary), 0.3);
 
   &:last-child {
     margin-bottom: 0;
@@ -47,6 +47,7 @@
     border-bottom: none;
     font-size: 15px;
     text-align: left;
+    color: color(white);
 
     &:last-child {
       margin-right: 0;
@@ -54,20 +55,40 @@
 
     &.active {
       .main-nav__link {
-        border-bottom: 3px solid color(secondary);
         color: color(white);
+
+        &::after {
+          opacity: 1;
+          background-color: color(secondary);
+        }
       }
     }
   }
 
   .main-nav__link {
+    position: relative;
     padding: 4px;
+    padding-bottom: 8px;
     text-align: center;
-    border-bottom: 3px solid transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      bottom: 2px;
+      height: 3px;
+      background-color: rgba(color(white), 0.3);
+      opacity: 0;
+      transition: duration(md) func(primary);
+    }
 
     @include hover {
       color: color(white);
-      border-bottom: 3px solid color(white);
+
+      &::after {
+        opacity: 1;
+      }
     }
   }
 }
