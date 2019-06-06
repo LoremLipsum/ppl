@@ -56,23 +56,43 @@
 }
 
 .header__lang {
+  position: relative;
   display: inline-block;
-  height: 36px;
+  padding: 10px 4px;
   color: color(white);
+  font-size: 15px;
   text-decoration: none;
   vertical-align: middle;
   text-align: center;
   text-transform: uppercase;
-  line-height: 36px;
+  line-height: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    bottom: 2px;
+    height: 3px;
+    background-color: rgba(color(white), 0.3);
+    opacity: 0;
+    transition: duration(md) func(primary);
+  }
 
   &:hover,
   &:focus {
-    border-bottom: 3px solid color(white);
+    &::after {
+      opacity: 1;
+    }
   }
 
   &.active {
     color: color(secondary);
-    border-bottom: 3px solid color(secondary);
+
+    &::after {
+      opacity: 1;
+      background-color: color(secondary);
+    }
   }
 }
 
@@ -138,8 +158,8 @@
   width: 280px;
   padding-top: 60px;
   padding-bottom: 20px;
-  background-color: color(primary);
-  color: color(white);
+  background-color: color(white);
+  color: color(primary);
   transition: duration(md) func(primary);
 
   &.active {
@@ -160,6 +180,14 @@
 
 .header__overlay {
   z-index: 1000;
+}
+
+.header__scroll {
+  display: none !important;
+
+  &.active {
+    display: block !important;
+  }
 }
 
 @include respond-to(620px) {
@@ -304,7 +332,6 @@
   }
 }
 
-
 @include respond-to(1920px) {
   .header {
     padding: 30px 40px;
@@ -322,8 +349,6 @@
   }
 
   .header__lang {
-    height: 38px;
-    line-height: 38px;
   }
 
   .header__dialog {

@@ -14,7 +14,7 @@
   padding: 4px;
   border-color: #262626;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1;
   font-weight: 500;
   color: color(secondary);
   text-transform: uppercase;
@@ -29,9 +29,9 @@
   display: inline-block;
   padding: 4px;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1;
   font-weight: 400;
-  color: color(white);
+  color: inherit;
   text-decoration: none;
   text-transform: uppercase;
 }

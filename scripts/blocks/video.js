@@ -3,7 +3,7 @@
 (function() {
   var btns = document.querySelectorAll('.js-button-video');
 
-  if(btns){
+  if(btns.length){
     var videoModal = document.querySelector('.js-modal-video');
     var video = videoModal.querySelector('.js-modal-video-iframe');
     var overlay = videoModal.querySelector('.js-modal-overlay');
@@ -21,7 +21,7 @@
         var atr = videoItem.getAttribute('data-video-id');
 
         videoModal.classList.add('active');
-        video.src = 'https://www.youtube.com/embed/' + atr+ '?enablejsapi=1';
+        video.src = 'https://www.youtube.com/embed/' + atr+ '?enablejsapi=1&autoplay=1';
         video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
       })
     }

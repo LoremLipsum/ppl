@@ -24,8 +24,17 @@
 @import "../pug/blocks/callback/callback";
 @import "../pug/blocks/main-nav/main-nav";
 @import "../pug/blocks/overlay/overlay";
+@import "../pug/blocks/page-nav/page-nav";
+@import "../pug/blocks/lang-nav-lvl-2/lang-nav-lvl-2";
+@import "../pug/blocks/lang-nav/lang-nav";
+@import "../pug/blocks/page-header/page-header";
 @import "../pug/blocks/video-item/video-item";
 @import "../pug/blocks/limit/limit";
+
+@import "../pug/blocks/checkbox/checkbox";
+@import "../pug/blocks/field/field";
+@import "../pug/blocks/form-feedback/form-feedback";
+
 @import "../pug/blocks/map-outline/map-outline";
 @import "../pug/blocks/pin-item/pin-item";
 @import "../pug/blocks/news-item/news-item";
@@ -40,4 +49,16 @@
 @import "../pug/blocks/agency/agency";
 @import "../pug/blocks/main-slider/main-slider";
 @import "../pug/blocks/modal/modal";
+@import "../pug/blocks/dropdown/dropdown";
+@import "../pug/blocks/dropdown-list/dropdown-list";
+
+
+@import "../pug/blocks/list-items/list-items";
+@import "../pug/blocks/post-item/post-item";
+@import "../pug/blocks/pagination/pagination";
+
+@import "../pug/blocks/breadcrumbs/breadcrumbs";
+
+@import "./blocks/article";
 @import "./blocks/content";
+@import "./blocks/page-content";

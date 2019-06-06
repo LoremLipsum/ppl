@@ -1,9 +1,14 @@
 .content {
-
+  flex-grow: 1;
+  height: 100%;
 }
 
 .content__wrap {
   @include wrapper;
+}
+
+.content__heading {
+  margin-bottom: 30px;
 }
 
 .content__features {
