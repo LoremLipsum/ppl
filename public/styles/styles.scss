@@ -53,9 +53,7 @@
 @import "../pug/blocks/post-item/post-item";
 @import "../pug/blocks/pagination/pagination";
 @import "../pug/blocks/breadcrumbs/breadcrumbs";
-@import "./blocks/article";
-@import "./blocks/content";
-@import "./blocks/page-content";
+
 @import "../pug/blocks/teaser/teaser";
 @import "../pug/blocks/about-intro/about-intro";
 @import "../pug/blocks/about-process/about-process";
@@ -68,3 +66,6 @@
 @import "../pug/blocks/agency-w-list/agency-w-list";
 @import "../pug/blocks/card/card";
 @import "../pug/blocks/offer/offer";
+@import "./blocks/article";
+@import "./blocks/content";
+@import "./blocks/page-content";
