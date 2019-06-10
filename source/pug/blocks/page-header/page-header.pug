@@ -27,6 +27,10 @@ mixin page-header(data)
                 primary: true,
             })
             nav.page-header__panel.js-panel-page-nav(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+                +button-close({
+                    mix: 'page-header__panel-close',
+                    js: 'panel-page-close',
+                })
                 .page-header__panel-wrap
                     +page-nav({
                         items: mainNav,
@@ -35,6 +39,7 @@ mixin page-header(data)
                     +callback({
                         mix: 'page-header__callback page-header__callback--panel'
                     })
+
             nav.page-header__lang-nav(aria-label='Языковое меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
                 +lang-nav({
                     items: [

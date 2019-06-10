@@ -10,22 +10,6 @@ $button-nav-color-active: color(black);
   height: $button-nav-height;
   padding: 6px;
   border-radius: 50%;
-
-  &.active {
-    background-color: rgba(color(secondary), 0.2);
-
-    .button-nav__lines {
-      background-color: transparent;
-
-      &::before {
-        animation-name: nav-before-open;
-      }
-
-      &::after {
-        animation-name: nav-after-open;
-      }
-    }
-  }
 }
 
 .button-nav__icon {
@@ -68,58 +52,58 @@ $button-nav-color-active: color(black);
   }
 }
 
-@keyframes nav-before-close {
-  0% {
-    transform: translateY($button-nav-distanse) rotate(45deg);
-  }
-
-  50% {
-    transform: translateY($button-nav-distanse / 2) rotate(0);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes nav-after-close {
-  0% {
-    transform: translateY(- $button-nav-distanse) rotate(-45deg);
-  }
-
-  50% {
-    transform: translateY(- $button-nav-distanse / 2) rotate(0);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes nav-before-open {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY($button-nav-distanse / 2);
-  }
-
-  100% {
-    transform: translateY($button-nav-distanse) rotate(45deg);
-  }
-}
-
-@keyframes nav-after-open {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(- $button-nav-distanse / 2);
-  }
-
-  100% {
-    transform: translateY(- $button-nav-distanse) rotate(-45deg);
-  }
-}
+// @keyframes nav-before-close {
+//   0% {
+//     transform: translateY($button-nav-distanse) rotate(45deg);
+//   }
+//
+//   50% {
+//     transform: translateY($button-nav-distanse / 2) rotate(0);
+//   }
+//
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
+//
+// @keyframes nav-after-close {
+//   0% {
+//     transform: translateY(- $button-nav-distanse) rotate(-45deg);
+//   }
+//
+//   50% {
+//     transform: translateY(- $button-nav-distanse / 2) rotate(0);
+//   }
+//
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
+//
+// @keyframes nav-before-open {
+//   0% {
+//     transform: translateY(0);
+//   }
+//
+//   50% {
+//     transform: translateY($button-nav-distanse / 2);
+//   }
+//
+//   100% {
+//     transform: translateY($button-nav-distanse) rotate(45deg);
+//   }
+// }
+//
+// @keyframes nav-after-open {
+//   0% {
+//     transform: translateY(0);
+//   }
+//
+//   50% {
+//     transform: translateY(- $button-nav-distanse / 2);
+//   }
+//
+//   100% {
+//     transform: translateY(- $button-nav-distanse) rotate(-45deg);
+//   }
+// }

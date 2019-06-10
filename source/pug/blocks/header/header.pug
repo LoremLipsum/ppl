@@ -57,6 +57,10 @@ mixin header(data)
                 text: 'Крупнейший отечественный <br>производитель и поставщик <br>табачных изделий'
             })
         nav.header__panel.js-panel-main-nav(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+            +button-close({
+                mix: 'header__panel-close',
+                js: 'panel-main-close',
+            })
             .header__panel-wrap
                 +main-nav({
                     items: mainNav,
