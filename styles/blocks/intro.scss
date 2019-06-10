@@ -221,10 +221,10 @@
     &--limit {
       display: block;
       top: 20px;
-      right: 0;
+      right: 72px;
       margin: 0;
       transform-origin: 100% 0;
-      transform: rotate(-90deg) translate(0%, calc(-100% - 43px));
+      transform: rotate(-90deg);
 
       .intro__note-text {
         text-align: right;
@@ -335,7 +335,7 @@
 
   .intro__note {
     &--limit {
-      transform: rotate(-90deg) translate(0%, calc(-100% - 82px));
+      right: 112px;
     }
 
     &--button-down {
