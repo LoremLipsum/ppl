@@ -2940,6 +2940,10 @@ main
         -ms-flex-pack: center;
         justify-content: center;
     }
+    .page-header__panel-close
+    {
+        display: none;
+    }
     .page-header__lang-nav
     {
         margin-left: 20px;
@@ -4762,6 +4766,10 @@ main
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
+    }
+    .header__panel-close
+    {
+        display: none;
     }
     .header__main-nav
     {
