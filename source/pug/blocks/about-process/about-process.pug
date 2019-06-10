@@ -1,0 +1,29 @@
+mixin about-process(data)
+    -
+        var aboutProcessItems = [
+            'кондиционирование и соусирование',
+            'резка и сушка резаного продукта',
+            'отделение табачной жилки и пыли',
+            'ароматизация, хранение',
+        ]
+
+    +el({
+        tag: 'section',
+        class: 'about-process',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .about-process__wrap
+            .about-process__text
+                p.
+                    Стоит отметить, прежде чем табачные изделия нашей компании
+                    попадают в оптовую и розничную продажу, наш табак проходит
+                    несколько основных этапов его обработки:
+            ul.about-process__list
+                for item in aboutProcessItems
+                    +el({
+                        tag: 'li',
+                        class: 'about-process__item',
+                        text: item,
+                    })

@@ -1,0 +1,34 @@
+mixin agency-list(data)
+    +el({
+        tag: 'ul',
+        class: 'agency-list',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        each item in data.items
+            +el({
+                tag: 'li',
+                class: 'agency-list__item',
+                mod: item.mod,
+            })
+                +el({
+                    tag: 'a',
+                    class: 'agency-list__link',
+                    text: item.text,
+                })
+                if item.items
+                    +el({
+                        tag: 'ul',
+                        class: 'agency-list__lvl-2',
+                    })
+                        each item2 in item.items
+                            +el({
+                                tag: 'li',
+                                class: 'agency-list__item-lvl-2',
+                            })
+                                +el({
+                                    tag: 'a',
+                                    class: 'agency-list__link-lvl-2',
+                                    text: item2,
+                                })

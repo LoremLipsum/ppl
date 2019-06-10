@@ -9,7 +9,7 @@
   line-height: 24px;
   font-weight: 400;
   text-transform: none;
-  border-bottom: 1px solid rgba(color(secondary), 0.2);
+  border-bottom: 1px solid rgba(color(secondary), 0.4);
 
   &:last-child {
     margin-bottom: 0;
@@ -78,7 +78,7 @@
       right: 4px;
       bottom: 2px;
       height: 3px;
-      background-color: rgba(color(secondary), 0.3);
+      background-color: rgba(color(secondary), 0.4);
       opacity: 0;
       transition: duration(md) func(primary);
     }
@@ -91,6 +91,4 @@
       }
     }
   }
-
-
 }

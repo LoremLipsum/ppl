@@ -1,18 +1,20 @@
+extends ./templates/template
+
 
 block vars
     - var pageTitle = 'ТД Время'
 
 block content
-    main.content
-        .content__wrap
+    main.page-content.content--bg-light
+        .page-content__wrap
             ul
                 li
                     a(href="page-main.html") Главная
-                li
-                    a(href="components.html") Компоненты
                 li
                     a(href="page-faq.html") Вопрос/ответ
                 li
                     a(href="page-posts.html") Статьи
                 li
                     a(href="page-posts-item.html") Статья
+                li
+                    a(href="page-about.html") О компании

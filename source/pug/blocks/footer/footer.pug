@@ -53,7 +53,7 @@ mixin footer(data)
                         .footer__phone-wrap
                             +el({
                                 tag: 'a',
-                                class: 'header__phone',
+                                class: 'footer__phone',
                                 href: 'tel:+79785001445',
                                 text: '+7 (978) 500-14-45',
                             })
@@ -64,8 +64,8 @@ mixin footer(data)
                             text: 'Респ. Крым, г. Симферополь, <br>ул. Набережная им. 60-летия </br>СССР, д.34'
                         })
                 .footer__nav
-                    .footer__nav-company(role='navigation' aria-label='Дополнительное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
-                        h4.footer__title Компания
+                    .footer__nav-item.footer__nav-item--dropdown.footer__nav-item--company.js-footer-nav-dropdown(role='navigation' aria-label='Дополнительное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+                        h4.footer__title.js-footer-nav-dropdown-button Компания
                         +el({
                             tag: 'ul',
                             class: 'footer__list',
@@ -79,9 +79,9 @@ mixin footer(data)
                                         tag: 'a',
                                         text: item,
                                     })(itemprop='url')
-                    .footer__nav-production(role='navigation' aria-label='Дополнительное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
-                        h4.footer__title Продукция
-                        .footer__nav-production-row
+                    .footer__nav-item.footer__nav-item--dropdown.footer__nav-item--production.js-footer-nav-dropdown(role='navigation' aria-label='Дополнительное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+                        h4.footer__title.js-footer-nav-dropdown-button Продукция
+                        .footer__nav-row
                             +el({
                                 tag: 'ul',
                                 class: 'footer__list',

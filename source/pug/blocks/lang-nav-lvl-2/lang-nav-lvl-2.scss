@@ -3,7 +3,7 @@
   padding-top: 5px;
   padding-bottom: 10px;
   background-color: color(white);
-  border: 1px solid rgba(color(secondary), 0.3);
+  border: 1px solid rgba(color(secondary), 0.4);
 }
 
 .lang-nav-lvl-2__item {
@@ -29,7 +29,7 @@
     right: 20px;
     bottom: 0;
     height: 3px;
-    background-color: color(secondary);
+    background-color: rgba(color(secondary), 0.4);
     opacity: 0;
     transition: duration(md) func(primary);
   }

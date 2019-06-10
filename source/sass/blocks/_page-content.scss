@@ -8,6 +8,10 @@
   &--bg-light {
     background-color: color(light);
   }
+
+  &--no-pad-bottom {
+    padding-bottom: 0 !important;
+  }
 }
 
 .page-content__wrap {
@@ -16,6 +20,7 @@
 
 .page-content__heading {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .page-content__dropdown-list {
@@ -29,6 +34,20 @@
 .page-content__breadcrumbs {
   margin-top: -20px;
   margin-bottom: 30px;
+}
+
+.page-content__about-teaser {
+  margin-bottom: 40px;
+}
+
+.page-content__about-intro {
+  margin-bottom: 30px;
+}
+
+@include respond-to(small-lg) {
+  .page-content__heading {
+    text-align: left;
+  }
 }
 
 @include respond-to(medium) {
@@ -53,6 +72,14 @@
   .page-content__breadcrumbs {
     margin-top: -30px;
   }
+
+  .page-content__about-teaser {
+    margin-bottom: 50px;
+  }
+
+  .page-content__about-intro {
+    margin-bottom: 40px;
+  }
 }
 
 @include respond-to(large) {
@@ -76,5 +103,13 @@
 
   .page-content__breadcrumbs {
     margin-top: -40px;
+  }
+
+  .page-content__about-teaser {
+    margin-bottom: 60px;
+  }
+
+  .page-content__about-intro {
+    margin-bottom: -160px;
   }
 }

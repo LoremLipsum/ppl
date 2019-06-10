@@ -20,6 +20,21 @@
       }
     }
   }
+
+  &--invert {
+    .checkbox__label {
+      &::after {
+        border-left-color: color(white);
+        border-bottom-color: color(white);
+      }
+    }
+  }
+}
+
+.checkbox--confirm.checkbox--invert {
+  .checkbox__label {
+    color: rgba(color(white), 0.6);
+  }
 }
 
 .checkbox__input {

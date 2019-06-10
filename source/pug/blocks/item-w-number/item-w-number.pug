@@ -1,0 +1,22 @@
+mixin item-w-number(data)
+    +el({
+        tag: data.tag,
+        class: 'item-w-number',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'item-w-number__title',
+            text: data.descr,
+            before: {
+                tag: 'b',
+                class: 'item-w-number__value',
+                text: data.number,
+            }
+        })
+        +el({
+            tag: 'p',
+            class: 'item-w-number__text',
+            text: data.text
+        })

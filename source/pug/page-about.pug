@@ -1,0 +1,34 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = "Peppell"
+    - var pageId = 1
+
+block content
+    main.page-content.page-content--bg-light.page-content--no-pad-bottom
+        .page-content__wrap
+            h1.page-content__heading О компании
+            +teaser({
+                text: 'Компания осуществляет полный производственный цикл — от выращивания сырья, производства продукции до доставки потребителям',
+                mix: 'page-content__about-teaser',
+            })
+        +about-intro({
+            mix: 'page-content__about-intro',
+        })
+        +about-process({
+            mix: 'page-content__about-process',
+        })
+        +about-descr({
+            mix: 'page-content__about-descr',
+        })
+        +about-features({
+
+        })
+        +about-slider({
+
+        })
+        +agency-w-list({
+            mix: 'page-content__agency-about',
+        })
+        +offer({
+        })

@@ -38,9 +38,11 @@ $button: (
     background-color: color(secondary);
     color: color(white);
     box-shadow: 0 4px 0 0 #ad7427;
+    transform-origin: center;
 
     @include hover {
-      color: rgba(color(white), 0.5);
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 0 #ad7427;
     }
   }
 }

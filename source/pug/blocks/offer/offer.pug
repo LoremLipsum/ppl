@@ -1,0 +1,67 @@
+mixin offer(data)
+    +el({
+        class: 'offer',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        style: data.style,
+    })&attributes(attributes)
+        .offer__wrap
+            .offer__content
+                h3.offer__heading
+                    | Остались вопросы?
+                    |
+                    span.offer__heading--accent
+                        | заполните форму
+                p.offer__text Специалист нашей компании свяжется с Вами в&nbsp;ближайшее время
+            +f({
+                class: 'offer__form',
+            })
+                +card({
+                    mix: 'offer__card',
+                    mod: 'dark',
+                })
+                    .card__field-group
+                        +field({
+                            mix: 'card__field',
+                            icon: 'user',
+                            mod:  ['w-icon', 'border-bottom'],
+                            label: 'Ваше имя',
+                            name: 'user',
+                            required: 'true',
+                            placeholder: 'Ваше имя'
+                        })(aria-required='true', aria-invalid='false')
+                        +field({
+                            mix: 'card__field',
+                            icon: 'tel',
+                            mod:  ['w-icon', 'border-bottom'],
+                            label: 'Ваш телефон',
+                            type: 'tel',
+                            name: 'tel',
+                            required: 'true',
+                            placeholder: '+7 (___) ___-__-__'
+                        })(aria-required='true', aria-invalid='false')
+                        +field({
+                            tag: 'textarea',
+                            mix: 'card__field',
+                            icon: 'message',
+                            mod:  ['w-icon', 'border-bottom'],
+                            label: 'Введите сообщение',
+                            name: 'message',
+                            placeholder: 'Сообщение'
+                        })
+                    .card__submit-wrap
+                        +button({
+                            type: 'submit',
+                            mix: 'card__submit',
+                            mod: ['shadow', 'size-md'],
+                            text: 'Отправить',
+                        })
+                    .offer__confirm-wrap
+                        +checkbox({
+                            mod: ['confirm', 'invert'],
+                            label: 'Даю согласие на обработку моих персональных данных',
+                            checked: 'checked',
+                            required: 'required',
+                            mix: 'form-feedback__confirm',
+                        })
