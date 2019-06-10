@@ -443,6 +443,8 @@ picturefill();
   var textSlider = new Swiper('.js-about-slider-text', {
     slidesPerView: 1,
     touchRatio: 0,
+    grabCursor: false,
+    autoHeight: false,
     thumbs: {
       swiper: imageSlider,
     },
@@ -452,6 +454,13 @@ picturefill();
       clickable: true,
       disabledClass: 'disabled',
     },
+    breakpoints: {
+      767: {
+        grabCursor: true,
+        autoHeight: true,
+        touchRatio: 1,
+      }
+    }
   });
 
   var imageSlider = undefined;

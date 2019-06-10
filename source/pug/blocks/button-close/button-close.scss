@@ -13,6 +13,7 @@
   &--white {
     .button-close__icon {
       @include icon-cross-color(color(white));
+      opacity: 0.6;
     }
   }
 }
