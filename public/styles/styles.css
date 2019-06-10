@@ -5657,7 +5657,7 @@ body > *
     position: relative;
 
     margin: 0;
-    padding: 10px 30px;
+    padding: 14px 30px;
 
     color: #cd8638;
 }
@@ -5665,7 +5665,7 @@ body > *
 {
     position: absolute;
     z-index: 1;
-    top: 25px;
+    top: 30px;
     right: 20px;
 
     margin-left: -4px;
@@ -5680,7 +5680,7 @@ body > *
 
     opacity: 1;
     border: 8px solid transparent;
-    border-top: 6px solid rgba(255, 255, 255, .3);
+    border-top: 6px solid rgba(205, 134, 56, .6);
 }
 
 .footer__list
@@ -8307,9 +8307,6 @@ body > *
 {
     .about-descr
     {
-        background-image: url('assets/images/bg-about-descr.jpg');
-        background-repeat: repeat;
-        background-position: top left;
         background-size: 10px 10px;
     }
     .about-descr__wrap
@@ -9397,8 +9394,8 @@ body > *
 
 .offer
 {
-    padding-top: 25px;
-    padding-bottom: 25px; 
+    padding-top: 30px;
+    padding-bottom: 30px; 
 
     color: #fff;
     background-color: #431b11;
@@ -9477,9 +9474,6 @@ body > *
     .offer
     {
         position: relative;
-
-        padding-top: 30px;
-        padding-bottom: 30px;
 
         background-image: url('../assets/images/bg-offer.jpg'); 
         background-repeat: no-repeat;
