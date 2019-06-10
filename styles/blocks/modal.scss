@@ -27,9 +27,10 @@
   position: relative;
   width: 100%;
   height: 100%;
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding-top: 50px;
+  padding-bottom: 35px;
   background-color: color(white);
+  border: 6px solid color(secondary);
 }
 
 .modal__dialog-inner {
@@ -43,26 +44,51 @@
   top: 5px;
   right: 5px;
 }
-//
-// .modal__heading {
-//   margin: 0;
-//   margin-bottom: 20px;
-//   color: color(black);
-//   font-size: 30px;
-//   font-weight: 700;
-//   line-height: 1.2;
-//   text-transform: uppercase;
-// }
-//
-// .modal__text {
-//   margin: 0;
-//   padding-bottom: 30px;
-// }
+
+.modal__heading {
+  margin: 0;
+  margin-bottom: 16px;
+  color: color(primary);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal__text {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align: center;
+}
 
 .modal__video {
   display: block;
   margin: 0 auto;
   border: none;
+}
+
+.modal__field-group {
+  margin-bottom: 30px;
+}
+
+.modal__field {
+  margin-bottom: 12px;
+}
+
+.modal__submit-wrap {
+  text-align: center
+}
+
+.modal__submit {
+  width: 100%;
+  max-width: 320px;
+}
+
+.modal__confirm-wrap {
+  margin-top: 30px;
+  text-align: center;
 }
 
 @media (orientation:  portrait) {
@@ -106,14 +132,14 @@
 
   .modal__dialog {
     flex-shrink: 0;
-    width: 590px;
+    width: 456px;
     height: auto;
     max-height: calc(100vh - 160px);
-    padding-bottom: 50px;
+    border-width: 8px;
   }
 
   .modal__dialog-inner {
-    padding: 0 65px;
+    padding: 0 50px;
   }
 
   .modal__close {
@@ -121,12 +147,24 @@
   }
 
   .modal__heading {
-    margin-bottom: 25px;
-    font-size: 40px;
+    font-size: 24px;
   }
 
   .modal__text {
-    padding-bottom: 45px;
+    font-size: 17px;
+  }
+
+  .modal__field-group {
+    margin-bottom: 40px;
+  }
+
+  .modal__field {
+    margin-bottom: 16px;
+  }
+
+  .modal__submit {
+    width: 220px;
+    max-width: none;
   }
 
   @media (orientation:  portrait) {
@@ -155,20 +193,27 @@
   }
 
   .modal__heading {
-    margin-bottom: 30px;
-    font-size: 45px;
-  }
-
-  .modal__dialog {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  .modal__dialog-inner {
-    padding: 0 70px;
+    font-size: 24px;
   }
 
   .modal__text {
-    padding-bottom: 50px;
+    font-size: 18px;
+  }
+
+  .modal__dialog {
+    width: 496px;
+    border-width: 10px;
+  }
+
+  .modal__dialog-inner {
+    padding: 0 60px;
+  }
+
+  .modal__field-group {
+    margin-bottom: 50px;
+  }
+
+  .modal__field {
+    margin-bottom: 20px;
   }
 }
