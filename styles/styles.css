@@ -1736,6 +1736,10 @@ main
 {
     background-color: rgba(205, 134, 56, .2);
 }
+.button-close--white .button-close__icon
+{
+    opacity: .6;
+}
 .button-close--white .button-close__icon::before,
 .button-close--white .button-close__icon::after
 {
@@ -2728,7 +2732,7 @@ main
     position: relative;
 
     padding: 10px;
-    padding-top: 30px;
+    padding-top: 35px;
 }
 
 .page-header__dialog-close
@@ -4476,7 +4480,7 @@ main
     position: relative;
 
     padding: 10px;
-    padding-top: 30px;
+    padding-top: 35px;
 }
 
 .header__dialog-close
@@ -6509,13 +6513,23 @@ main
 }
 .modal--video .modal__dialog
 {
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
 
+    border: none; 
     background-color: #190905;
 }
 .modal--video .modal__dialog-inner
 {
     padding: 0 10px;
+}
+.modal--video .modal__close .button-close__icon
+{
+    opacity: .6;
+}
+.modal--video .modal__close .button-close__icon::before,
+.modal--video .modal__close .button-close__icon::after
+{
+    background-color: #fff;
 }
 
 .modal__dialog
@@ -6524,7 +6538,7 @@ main
 
     width: 100%;
     height: 100%;
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 35px;
 
     border: 6px solid #cd8638; 

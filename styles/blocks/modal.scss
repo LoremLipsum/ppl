@@ -20,6 +20,12 @@
     .modal__dialog-inner {
       padding: 0 10px;
     }
+
+    .modal__close {
+      .button-close__icon {
+        @include icon-cross-color(color(white));
+      }
+    }
   }
 }
 
