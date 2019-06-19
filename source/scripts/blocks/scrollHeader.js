@@ -1,6 +1,7 @@
-(function($) {
-	'use strict';
+jQuery(document).ready(function($){
+  'use strict';
 	$(function() {
+
     var header = $('.js-header-scroll');
     var lastScrollTop = 0;
     var SCROLL_HEIGHT = 200;
@@ -14,5 +15,6 @@
       }
       lastScrollTop = st;
     });
-	});
-})(jQuery);
+
+  });
+});

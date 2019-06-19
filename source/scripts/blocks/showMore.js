@@ -25,7 +25,6 @@
         content = btn.parentNode.querySelector('.js-more-content');
         atr = parseInt(content.getAttribute('data-more'), 10);
         hiddenItems = content.querySelectorAll('.js-more-content > *:nth-child(n + ' + (atr + 1) + ')');
-        console.log(hiddenItems);
         for (var j = 0; j < hiddenItems.length; j += 1) {
           hiddenItems[j].classList.toggle('js-hidden');
         }

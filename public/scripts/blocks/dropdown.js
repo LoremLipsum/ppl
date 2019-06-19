@@ -1,6 +1,7 @@
-(function($) {
-	'use strict';
+jQuery(document).ready(function($){
+  'use strict';
 	$(function() {
+
     var btn;
     var btnsDropdown = $('.js-dropdown-button');
     var btnsFooter = $('.js-footer-nav-dropdown-button');
@@ -31,5 +32,5 @@
       initDropdown();
     });
 
-	});
-})(jQuery);
+  });
+});

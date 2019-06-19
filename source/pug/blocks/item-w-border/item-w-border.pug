@@ -1,0 +1,14 @@
+mixin item-w-border(data)
+    +el({
+        tag: data.tag,
+        class: 'item-w-border',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        href: data.href,
+    })&attributes(attributes)
+        +el({
+            tag: 'img',
+            class: 'item-w-border__image',
+            image: data.image,
+        })

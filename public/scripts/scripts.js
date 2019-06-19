@@ -1,3 +1,30 @@
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+
+    var btn = $('.js-page-up');
+    var lastScrollTop = 0;
+    var SCROLL_HEIGHT = 200;
+
+    $(window).scroll(function(e){
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop || st < SCROLL_HEIGHT) {
+        btn.removeClass('active');
+      } else  {
+        btn.addClass('active');
+      }
+      lastScrollTop = st;
+    });
+
+    btn.click(function (){
+      $('html, body').animate({
+        scrollTop: 0
+      }, 500);
+    });
+
+  });
+});
+
 'use strict';
 
 (function() {
@@ -59,9 +86,10 @@
 
 })();
 
-(function($) {
-	'use strict';
+jQuery(document).ready(function($){
+  'use strict';
 	$(function() {
+
     var btn;
     var btnsDropdown = $('.js-dropdown-button');
     var btnsFooter = $('.js-footer-nav-dropdown-button');
@@ -92,8 +120,8 @@
       initDropdown();
     });
 
-	});
-})(jQuery);
+  });
+});
 
 'use strict';
 
@@ -108,6 +136,15 @@
   }
 
 })();
+
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+
+    $('.js-fancybox').fancybox();
+
+  });
+});
 
 'use strict';
 
@@ -340,7 +377,6 @@ picturefill();
     document.addEventListener('keyup', onEscKeyup);
   }
 
-
 })();
 
 (function($) {
@@ -360,9 +396,10 @@ picturefill();
 	});
 })(jQuery);
 
-(function($) {
-	'use strict';
+jQuery(document).ready(function($){
+  'use strict';
 	$(function() {
+
     var header = $('.js-header-scroll');
     var lastScrollTop = 0;
     var SCROLL_HEIGHT = 200;
@@ -376,8 +413,9 @@ picturefill();
       }
       lastScrollTop = st;
     });
-	});
-})(jQuery);
+
+  });
+});
 
 'use strict';
 
@@ -406,7 +444,6 @@ picturefill();
         content = btn.parentNode.querySelector('.js-more-content');
         atr = parseInt(content.getAttribute('data-more'), 10);
         hiddenItems = content.querySelectorAll('.js-more-content > *:nth-child(n + ' + (atr + 1) + ')');
-        console.log(hiddenItems);
         for (var j = 0; j < hiddenItems.length; j += 1) {
           hiddenItems[j].classList.toggle('js-hidden');
         }

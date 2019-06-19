@@ -1,0 +1,21 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'ТД Время'
+    - var pageId = 1
+
+block content
+    main.page-content.content--bg-light
+        .page-content__wrap
+            h1.page-content__heading Cертификаты
+            +list-items({
+                mix: 'page-content__certificate'
+            })
+                each item in certificate
+                    +list-items-item({})
+                        +item-w-border({
+                            tag: 'a',
+                            href: './assets/images/certificate.jpg',
+                            image: item.image,
+                            js: 'fancybox'
+                        })()

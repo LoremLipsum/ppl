@@ -20,6 +20,11 @@ html(lang="ru-RU")
         block content
         block footer
             +footer({})
+        block button
+            +button-up({
+                text: 'Наверх',
+                js: 'page-up'
+            })
         block modal
             +modal({
                 js: 'callback-modal',
@@ -55,6 +60,48 @@ html(lang="ru-RU")
                             mix: 'modal__submit',
                             mod: ['shadow', 'size-md'],
                             text: 'Отправить',
+                        })
+                    .modal__confirm-wrap
+                        +checkbox({
+                            mod: ['confirm'],
+                            label: 'Даю согласие на обработку моих персональных данных',
+                            checked: 'checked',
+                            required: 'required',
+                            mix: 'form-feedback__confirm',
+                        })
+            +modal({
+                js: 'callback-modal',
+                heading: 'Ваш заказ: EUROPE classical quality',
+            })
+                +f({
+
+                })
+                    .modal__field-group
+                        +field({
+                            mix: 'modal__field',
+                            icon: 'user',
+                            mod:  ['w-icon', 'border-bottom'],
+                            label: 'Ваше имя',
+                            name: 'user',
+                            required: 'true',
+                            placeholder: 'Ваше имя'
+                        })(aria-required='true', aria-invalid='false')
+                        +field({
+                            mix: 'modal__field',
+                            icon: 'tel',
+                            mod:  ['w-icon', 'border-bottom'],
+                            label: 'Ваш телефон',
+                            type: 'tel',
+                            name: 'tel',
+                            required: 'true',
+                            placeholder: '+7 (___) ___-__-__'
+                        })(aria-required='true', aria-invalid='false')
+                    .modal__submit-wrap
+                        +button({
+                            type: 'submit',
+                            mix: 'modal__submit',
+                            mod: ['shadow', 'size-md'],
+                            text: 'Заказать',
                         })
                     .modal__confirm-wrap
                         +checkbox({

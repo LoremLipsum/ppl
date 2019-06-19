@@ -1,6 +1,7 @@
 @import "../assets/fonts/gothampro/gothampro";
 @import "./libs/normalize";
 @import "./libs/swiper";
+@import "./libs/jquery.fancybox";
 @import "./global/vars";
 @import "./global/functions";
 @import "./global/mixins/mixins";
@@ -69,3 +70,6 @@
 @import "./blocks/article";
 @import "./blocks/content";
 @import "./blocks/page-content";
+
+@import "../pug/blocks/button-up/button-up";
+@import "../pug/blocks/item-w-border/item-w-border";

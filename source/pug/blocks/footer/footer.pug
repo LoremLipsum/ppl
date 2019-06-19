@@ -110,19 +110,16 @@ mixin footer(data)
                                         })(itemprop='url')
         .footer__bottom
             .footer__wrap
-                .footer__copyright
-                    +el({
-                        tag: 'p',
-                        class: 'footer__text',
-                        text: 'г. Симферополь &copy;&nbsp;Copyright 2019&nbsp;г.'
-                    })
-                .footer__notify
-                    +el({
-                        tag: 'p',
-                        class: 'footer__text',
-                        mod: 'uppercase',
-                        text: 'Минздрав предупреждает курение опасно для вашего здоровья'
-                    })
+                +el({
+                    tag: 'p',
+                    class: 'footer__copyright',
+                    text: 'г. Симферополь &copy;&nbsp;Copyright 2019&nbsp;г.'
+                })
+                +el({
+                    tag: 'p',
+                    class: 'footer__notify',
+                    text: 'Минздрав предупреждает курение опасно для вашего здоровья'
+                })
                 .footer__madein
                     | Сделанo в
                     +el({
@@ -135,3 +132,9 @@ mixin footer(data)
                             tag: 'svg',
                             icon: 'sheer',
                         })
+                .footer__conf
+                    +el({
+                        tag: 'a',
+                        class: 'footer__conf-link',
+                        text: 'Политика конфиденциальности'
+                    })

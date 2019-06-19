@@ -1,0 +1,35 @@
+.item-w-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 6px solid color(secondary);
+  background-color: color(white);
+}
+
+.item-w-border__image {
+  display: block;
+  width: 100%;
+}
+
+@include respond-to(medium) {
+  .item-w-border {
+    padding: 10px;
+    border-width: 8px;
+  }
+
+  .item-w-border__image {
+
+  }
+}
+
+@include respond-to(medium) {
+  .item-w-border {
+    padding: 15px;
+    border-width: 10px;
+  }
+
+  .item-w-border__image {
+
+  }
+}
