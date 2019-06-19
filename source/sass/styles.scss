@@ -18,6 +18,7 @@
 @import "../pug/blocks/button-video/button-video";
 @import "../pug/blocks/button-nav/button-nav";
 @import "../pug/blocks/button-close/button-close";
+@import "../pug/blocks/button-up/button-up";
 @import "../pug/blocks/control/control";
 @import "../pug/blocks/link/link";
 @import "../pug/blocks/date/date";
@@ -30,6 +31,7 @@
 @import "../pug/blocks/lang-nav/lang-nav";
 @import "../pug/blocks/page-header/page-header";
 @import "../pug/blocks/video-item/video-item";
+@import "../pug/blocks/item-w-border/item-w-border";
 @import "../pug/blocks/limit/limit";
 @import "../pug/blocks/checkbox/checkbox";
 @import "../pug/blocks/field/field";
@@ -54,7 +56,6 @@
 @import "../pug/blocks/post-item/post-item";
 @import "../pug/blocks/pagination/pagination";
 @import "../pug/blocks/breadcrumbs/breadcrumbs";
-
 @import "../pug/blocks/teaser/teaser";
 @import "../pug/blocks/about-intro/about-intro";
 @import "../pug/blocks/about-process/about-process";
@@ -70,6 +71,3 @@
 @import "./blocks/article";
 @import "./blocks/content";
 @import "./blocks/page-content";
-
-@import "../pug/blocks/button-up/button-up";
-@import "../pug/blocks/item-w-border/item-w-border";
