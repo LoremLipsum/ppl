@@ -2,18 +2,24 @@ jQuery(document).ready(function($){
   'use strict';
 	$(function() {
 
-    var header = $('.js-header-scroll');
+    var btn = $('.js-page-up');
     var lastScrollTop = 0;
     var SCROLL_HEIGHT = 200;
 
     $(window).scroll(function(e){
       var st = $(this).scrollTop();
       if (st > lastScrollTop || st < SCROLL_HEIGHT) {
-        header.removeClass('active');
+        btn.removeClass('active');
       } else  {
-        header.addClass('active');
+        btn.addClass('active');
       }
       lastScrollTop = st;
+    });
+
+    btn.click(function (){
+      $('html, body').animate({
+        scrollTop: 0
+      }, 500);
     });
 
   });
