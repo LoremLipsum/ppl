@@ -5,6 +5,11 @@
   padding: 5px;
   border: 6px solid color(secondary);
   background-color: color(white);
+  transition: duration(md);
+
+  @include hover {
+    border-color: color(primary);
+  }
 }
 
 .item-w-border__image {

@@ -1,0 +1,9 @@
+mixin map(data)
+    +el({
+        class: 'map',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        id: 'map'
+    })
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")

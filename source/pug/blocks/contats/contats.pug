@@ -1,0 +1,77 @@
+mixin contats(data)
+    +el({
+        class: 'contacts',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .contacts__wrap
+            .contacts__content
+                +el({
+                    tag: 'a',
+                    class: 'contacts__phone',
+                    href: 'tel:+79175001446',
+                    text: '7 (917) 500-14-46',
+                })
+                +el({
+                    tag: 'p',
+                    class: 'contacts__text',
+                    text: 'Респ. Крым, г. Симферополь, <br>ул. Набережная им. 60-летия СССР, д.34'
+                })
+                +el({
+                    tag: 'a',
+                    class: 'contacts__link',
+                    href: 'mailto:time@tdtime.ru',
+                    text: 'time@tdtime.ru',
+                })
+            +card({
+                mix: 'contacts__card',
+                mod: 'white',
+                heading: 'Оставить заявку',
+                text: 'Заполните форму и наши специалисты перезвонит Вам в ближайшее время'
+            })
+                +f({
+                })
+                    .card__field-group
+                        +field({
+                            mix: 'card__field',
+                            icon: 'user',
+                            mod:  ['w-icon', 'border-bottom'],
+                            label: 'Ваше имя',
+                            name: 'user',
+                            required: 'true',
+                            placeholder: 'Ваше имя'
+                        })(aria-required='true', aria-invalid='false')
+                        +field({
+                            mix: 'card__field',
+                            icon: 'tel',
+                            mod:  ['w-icon', 'border-bottom'],
+                            label: 'Ваш телефон',
+                            type: 'tel',
+                            name: 'tel',
+                            required: 'true',
+                            placeholder: '+7 (___) ___-__-__'
+                        })(aria-required='true', aria-invalid='false')
+                        +field({
+                            tag: 'textarea',
+                            mix: 'card__field',
+                            icon: 'message',
+                            mod:  ['w-icon', 'border-bottom'],
+                            label: 'Введите сообщение',
+                            name: 'message',
+                            placeholder: 'Сообщение'
+                        })
+                    .card__submit-wrap
+                        +button({
+                            type: 'submit',
+                            mix: 'card__submit',
+                            mod: ['shadow', 'size-md'],
+                            text: 'Отправить',
+                        })
+                    .card__confirm-wrap
+                        +checkbox({
+                            mod: ['confirm'],
+                            label: 'Даю согласие на обработку моих персональных данных',
+                            checked: 'checked',
+                            required: 'required',
+                        })

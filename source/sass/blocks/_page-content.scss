@@ -10,6 +10,10 @@
   &--no-pad-bottom {
     padding-bottom: 0 !important;
   }
+
+  &--contacts {
+    padding-bottom: 0 !important;
+  }
 }
 
 .page-content__wrap {
@@ -53,6 +57,13 @@
     margin-top: 80px;
     padding-top: 55px;
     padding-bottom: 55px;
+
+    &--contacts {
+      .page-content__heading {
+        margin-bottom: 50px;
+        font-size: 30px;
+      }
+    }
   }
 
   .page-content__heading {
@@ -85,6 +96,13 @@
     margin-top: 100px;
     padding-top: 65px;
     padding-bottom: 65px;
+
+    &--contacts {
+      .page-content__heading {
+        margin-bottom: 60px;
+        font-size: 36px;
+      }
+    }
   }
 
   .page-content__heading {

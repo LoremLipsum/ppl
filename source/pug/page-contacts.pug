@@ -1,0 +1,14 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'ТД Время'
+    - var pageId = 1
+
+block content
+    main.page-content.page-content--contacts
+        .page-content__wrap
+            h1.page-content__heading Контакты
+        +contats({
+
+        })
+        +map({})
