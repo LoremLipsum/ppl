@@ -39,19 +39,6 @@
       }
     }
 
-    &:hover,
-    &:focus {
-      .lang-nav__lvl-2 {
-        transform: scaleY(1);
-      }
-
-      .lang-nav__link {
-        &::before {
-          transform: translateY(-4px) rotate(180deg);
-        }
-      }
-    }
-
     &.active {
       .lang-nav__lvl-2 {
         transform: scaleY(1);
@@ -99,4 +86,20 @@
   right: 0;
   z-index: 1;
   transform: scaleY(0);
+}
+
+@include respond-to(1024px) {
+  .lang-nav__item {
+    &:hover {
+      .lang-nav__lvl-2 {
+        transform: scaleY(1);
+      }
+
+      .lang-nav__link {
+        &::before {
+          transform: translateY(-4px) rotate(180deg);
+        }
+      }
+    }
+  }
 }
