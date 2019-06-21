@@ -6,12 +6,12 @@
 
 @include respond-to(medium) {
   .map {
-    height: 400px;
+    height: 350px;
   }
 }
 
 @include respond-to(1024px) {
   .map {
-    height: 600px;
+    height: 466px;
   }
 }

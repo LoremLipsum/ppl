@@ -10,6 +10,10 @@
   &--image {
     margin-bottom: 20px;
   }
+
+  &--text {
+    @include first-last;
+  }
 }
 
 .about-intro__image-wrap {
@@ -43,8 +47,6 @@
 
     &--text {
       padding-left: 40px;
-
-      @include first-last;
     }
   }
 
