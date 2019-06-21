@@ -1,0 +1,13 @@
+mixin product(data)
+    +el({
+        class: 'product',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +product-image({
+            mix: 'product__image'
+        })
+        +product-info({
+            mix: 'product__info'
+        })

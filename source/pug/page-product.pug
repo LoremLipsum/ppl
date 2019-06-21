@@ -1,0 +1,19 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'ТД Время'
+    - var pageId = 1
+
+block content
+    main.page-content.page-content--product
+        .page-content__wrap
+            h1.page-content__heading Продукция
+            .page-content__content-w-aside
+                aside.page-content__aside
+                    +catalog-nav({
+                        items: catalogNav
+                    })
+                .page-content__center
+                    +product({
+
+                    })

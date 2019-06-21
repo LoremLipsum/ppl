@@ -5,6 +5,49 @@ block vars
     - var pageId = 1
 
 block content
-    main.page-content
+    main.page-content.page-content--production
         .page-content__wrap
             h1.page-content__heading Производство
+        +production({
+            mod: 'intro',
+        })
+            .production__row
+                .production__column.production__column--text
+                    p.production__text.
+                        Мы выполняем полный цикл производства табачных изделий.
+                    p.production__text.
+                        Соответствуем высоким стандартам качества, осуществляя  контроль на всех этапах.
+                    ul.production__list
+                        li.production__item Табачная фабрика оснащена современным оборудованием.
+                        li.production__item Наша компания выпускает продукцию под собственными торговыми марками.
+                        li.production__item Продукция представлена во всех ценовых сегментах.
+                        li.production__item Дизайн табачных пачек разрабатывается с учетом потребительских предпочтений и последних тенденций рынка.
+                .production__column.production__column--image
+                    figure.production__image-wrap
+                        +el({
+                            tag: 'img',
+                            class: 'production__image',
+                            image: 'production01.jpg',
+                        })
+        +production-teaser({})
+        +process({
+            mix: 'page-content__process',
+        })
+        +production({
+        })
+            .production__row
+                .production__column.production__column--text
+                    h2.production__heading Сигаретное производство
+                    ul.production__list
+                        li.production__item Участок по производству сигарет с фильтром
+                        li.production__item Участок по производству фильтропалочки
+                        li.production__item Склад нетабачных материалов
+                        li.production__item Упаковка
+                        li.production__item Контроль качества
+                .production__column.production__column--image
+                    figure.production__image-wrap
+                        +el({
+                            tag: 'img',
+                            class: 'production__image',
+                            image: 'production02.jpg',
+                        })

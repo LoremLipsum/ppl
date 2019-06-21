@@ -1,0 +1,10 @@
+mixin production(data)
+    +el({
+        tag: 'section',
+        class: 'production',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .production__wrap
+            block

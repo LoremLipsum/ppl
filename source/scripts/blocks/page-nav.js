@@ -17,7 +17,7 @@
 
     var close = function() {
       block.classList.remove('active');
-      overlay.classList.remove('active');Open
+      overlay.classList.remove('active');
     };
 
     var onBtnOpenClick = function(e) {

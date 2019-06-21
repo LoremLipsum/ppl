@@ -10,6 +10,10 @@
   &--no-pad-bottom {
     padding-bottom: 0 !important;
   }
+
+  &--contacts {
+    padding-bottom: 0 !important;
+  }
 }
 
 .page-content__wrap {
@@ -42,7 +46,15 @@
   margin-bottom: 30px;
 }
 
+.page-content__process {
+  margin-bottom: 30px;
+}
+
 @include respond-to(small-lg) {
+  .page-content {
+    margin-top: 80px;
+  }
+
   .page-content__heading {
     text-align: left;
   }
@@ -50,9 +62,16 @@
 
 @include respond-to(medium) {
   .page-content {
-    margin-top: 80px;
     padding-top: 55px;
     padding-bottom: 55px;
+
+    &--contacts,
+    &--production {
+      .page-content__heading {
+        margin-bottom: 50px;
+        font-size: 30px;
+      }
+    }
   }
 
   .page-content__heading {
@@ -80,11 +99,31 @@
   }
 }
 
+@include respond-to(medium-lg) {
+  .page-content {
+    &--production {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  .page-content__process {
+    margin-bottom: 0;
+  }
+}
+
 @include respond-to(large) {
   .page-content {
     margin-top: 100px;
     padding-top: 65px;
     padding-bottom: 65px;
+
+    &--contacts,
+    &--production {
+      .page-content__heading {
+        margin-bottom: 60px;
+        font-size: 36px;
+      }
+    }
   }
 
   .page-content__heading {

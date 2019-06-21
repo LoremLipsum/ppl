@@ -1,0 +1,54 @@
+mixin process(data)
+    -
+        var process = [
+            {
+                text: 'Обработка табака'
+            },
+            {
+                text: 'Кондиционирование и&nbsp;соусирование'
+            },
+            {
+                text: 'Резка и сушка резаного продукта'
+            },
+            {
+                text: 'Отделение табачной жилки и&nbsp;пыли'
+            },
+            {
+                text: 'Ароматизация'
+            },
+            {
+                text: 'Хранение'
+            },
+
+        ]
+
+    +el({
+        tag: 'section',
+        class: 'process',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        .process__wrap
+            .process__heading Этапы табачного производства
+            .process__list-wrap
+                +el({
+                    tag: 'ol',
+                    class: 'process__list',
+                })
+                    each item, index in process
+                        +el({
+                            tag: 'li',
+                            class: 'process__item',
+                            js: 'show-item'
+                        })
+                            +el({
+                                class: 'process__text',
+                                text: item.text,
+                            })
+                                if !(index == (process.length - 1))
+                                    +el({
+                                        tag: 'svg',
+                                        class: 'process__arrow',
+                                        icon: 'arrow-dotted',
+                                    })

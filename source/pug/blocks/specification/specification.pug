@@ -1,0 +1,45 @@
+mixin specification-tr(data)
+    +el({
+        tag: 'tr',
+        class: 'specification__tr',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        block
+
+mixin specification-th(data)
+    +el({
+        tag: 'th',
+        class: 'specification__th',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)
+
+mixin specification-td(data)
+    +el({
+        tag: 'td',
+        class: 'specification__td',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)
+
+mixin specification(data)
+    +el({
+        tag: 'table',
+        class: 'specification',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        if data.caption
+            +el({
+                tag: 'caption',
+                text: data.caption,
+                class: 'specification__caption'
+            })
+        block

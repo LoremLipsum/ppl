@@ -1,0 +1,54 @@
+mixin product-info(data)
+    +el({
+        tag: 'section',
+        class: 'product-info',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        h2.product-info__heading EUROPE classical quality
+        .product-info__text
+            p.
+                EUROPE classical quality — порадуют любителей насыщенного
+                вкуса натурального табака. Новый дизайн упаковки лишь украсит
+                и улучшит впечатление.
+        +specification({
+            mix: 'product-info__specification',
+            caption: 'Параметры безопасности',
+        })
+            +specification-tr({})
+                +specification-td({
+                    text: 'Никотин'
+                })
+                +specification-td({
+                    text: '0,6 мг/сиг'
+                })
+            +specification-tr({})
+                +specification-td({
+                    text: 'Смола'
+                })
+                +specification-td({
+                    text: '8 мг/сиг'
+                })
+            +specification-tr({})
+                +specification-td({
+                    text: 'СО'
+                })
+                +specification-td({
+                    text: '9 мг/сиг'
+                })
+            +specification-tr({
+                mod: 'total',
+            })
+                +specification-td({
+                    text: 'Количество:'
+                })
+                +specification-td({
+                    text: '20 сиг/пачка'
+                })
+        .product-info__button-wrap
+            +button({
+                mod: ['shadow', 'size-md'],
+                mix: 'product-info__button',
+                text: 'Заказать'
+            })

@@ -1,0 +1,29 @@
+mixin catalog-nav(data)
+    +el({
+        class: 'catalog-nav',
+        mix: data.mix,
+        js: data.js,
+        mod: data.mod,
+    })&attributes(attributes)
+        +button({
+            mix: 'catalog-nav__button',
+            text: 'Каталог',
+            js: 'catalog-nav-button',
+        })
+        +el({
+            tag: 'ul',
+            class: 'catalog-nav__list',
+        })
+            each item in data.items
+                +el({
+                    tag: 'li',
+                    class: 'catalog-nav__item',
+                    mod: item.mod,
+                    mix: item.mix,
+                })
+                    +el({
+                        tag: 'a',
+                        class: 'catalog-nav__link',
+                        text: item.text,
+                        href: item.href
+                    })

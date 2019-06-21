@@ -1,0 +1,13 @@
+mixin production-teaser(data)
+    +el({
+        class: 'production-teaser',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .production-teaser__wrap
+            p.production-teaser__text
+                | Производственный цикл предприятия состоит из&nbsp;двух основных частей&nbsp;&mdash;
+                |
+                span.production-teaser__text--accent
+                    | табачного&nbsp;производства и&nbsp;сигаретного производства

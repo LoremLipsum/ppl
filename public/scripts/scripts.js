@@ -28,6 +28,19 @@ jQuery(document).ready(function($){
 'use strict';
 
 (function() {
+  var btn = document.querySelector('.js-catalog-nav-button');
+
+  if(btn) {
+    btn.addEventListener('click', function(e) {
+      e.currentTarget.parentNode.classList.toggle('active');
+    });
+  }
+
+})();
+
+'use strict';
+
+(function() {
 
   var header = document.querySelector('.js-header');
 
@@ -162,6 +175,52 @@ jQuery(document).ready(function($){
 
   for (var i = 0; i < textareas.length; i += 1) {
     textareas[i].innerHTML = textareas[i].innerHTML.trim();
+  }
+
+})();
+
+'use strict';
+
+(function() {
+  var btns = document.querySelectorAll('.js-lang-nav-link');
+
+  if(btns.length) {
+    if(parseInt(window.innerWidth, 10) < 1024) {
+      for (var i = 0; i < btns.length; i += 1) {
+        btns[i].addEventListener('click', function(e) {
+          e.currentTarget.parentNode.classList.toggle('active');
+        });
+      }
+
+      var onEscKeyup = function(e) {
+        if (e.keyCode === 27) {
+          e.preventDefault();
+          for (var i = 0; i < btns.length; i += 1) {
+             btns[i].parentNode.classList.remove('active');
+          }
+        }
+      }
+
+      var closeOnDoc = function(e) {
+        for (var i = 0; i < btns.length; i += 1) {
+          var target = e.target;
+          var items = target == btns[i] || btns[i].parentNode.contains(target);
+          var active = btns[i].parentNode.classList.contains('active');
+
+          if (!items && active) {
+            btns[i].parentNode.classList.remove('active');
+          }
+        }
+      };
+
+      var onDocClick = function(e) {
+        e.preventDefault();
+        closeOnDoc(e);
+      };
+
+      document.addEventListener('mouseup', onDocClick);
+      document.addEventListener('keyup', onEscKeyup);
+    }
   }
 
 })();
@@ -386,7 +445,7 @@ picturefill();
 
     var close = function() {
       block.classList.remove('active');
-      overlay.classList.remove('active');Open
+      overlay.classList.remove('active');
     };
 
     var onBtnOpenClick = function(e) {
@@ -634,6 +693,29 @@ jQuery(document).ready(function($){
   });
 
 })();
+
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+
+    var paginationBtns = $('.js-pagination-link');
+    var btn;
+
+    var toggle = function(btns) {
+      btns.bind('click', function(e) {
+        e.preventDefault();
+        btn = $(this);
+        btns.not(btn).parent().removeClass('active');
+        btn.parent().toggleClass('active');
+      });
+    }
+
+    if(paginationBtns.length) {
+      toggle(paginationBtns);
+    }
+
+  });
+});
 
 'use strict';
 

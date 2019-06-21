@@ -2,7 +2,6 @@ mixin lang-nav(data)
     -var className = 'lang-nav'
     -var active = ''
 
-
     +el({
         tag: 'ul',
         class: className,
@@ -21,7 +20,7 @@ mixin lang-nav(data)
                     class: className + '__link',
                     text:item.text,
                     href: item.href,
-                    js: item.js,
+                    js: 'lang-nav-link',
                     ariaHasPopup: item.items ? 'true' : ''
                 })(rel='alternate' hreflang=item.lang itemprop='url')
                 if item.items
