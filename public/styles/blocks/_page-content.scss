@@ -50,6 +50,10 @@
   margin-bottom: 30px;
 }
 
+.page-content__aside {
+  margin-bottom: 30px;
+}
+
 @include respond-to(small-lg) {
   .page-content {
     margin-top: 80px;
@@ -97,6 +101,20 @@
   .page-content__about-intro {
     margin-bottom: 40px;
   }
+
+  .page-content__content-w-aside {
+    display: flex;
+  }
+
+  .page-content__aside {
+    width: 280px;
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+
+  .page-content__center {
+    width: calc(100% - 330px);
+  }
 }
 
 @include respond-to(medium-lg) {
@@ -122,6 +140,18 @@
       .page-content__heading {
         margin-bottom: 60px;
         font-size: 36px;
+      }
+    }
+
+    &--product {
+      .page-content__heading {
+        font-size: 40px;
+      }
+
+      .page-content__center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
   }

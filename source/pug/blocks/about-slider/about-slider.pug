@@ -10,12 +10,13 @@ mixin about-slider(data)
             h2.about-slider__heading
                 | Ценности компании
             .about-slider__content
-                .about-slider__text-slider.js-about-slider-text.swiper-container
+                .about-slider__text-slider.js-about-slider-text.swiper-container.nano
                     .swiper-wrapper
                         each item in aboutSlider.text
                             .about-slider__text-slide.swiper-slide
                                 h3.about-slider__subheading !{item.heading}
-                                .about-slider__text !{item.text}
+                                .about-slider__text.nano.js-nano
+                                    .nano-content !{item.text}
                 .about-slider__nav
                     +control({
                         tag: 'button',

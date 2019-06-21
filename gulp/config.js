@@ -26,6 +26,7 @@ const config = {
                       './node_modules/imask/dist/imask.js',
                       './node_modules/picturefill/dist/picturefill.js',
                       './source/scripts/libs/jquery.fancybox.js',
+                      './node_modules/nanoscroller/bin/javascripts/jquery.nanoscroller.js',
                       // './node_modules/wowjs/dist/wow.js',
                       // 'node_modules/jquery-match-height/dist/jquery.matchHeight.js',
                       // 'node_modules/slick-carousel/slick/slick.js',
